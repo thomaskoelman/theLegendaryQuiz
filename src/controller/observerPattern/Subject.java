@@ -7,5 +7,5 @@ public interface Subject {
 
     void removeObserver(Observer observer);
 
-    void notifyObservers(String message, String question, ArrayList<String> answers);
+    void notifyObservers();
 }

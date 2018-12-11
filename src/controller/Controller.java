@@ -49,6 +49,11 @@ public class Controller implements Subject {
         }
     }
 
+    //when we start a new round, the controller must retrieve the first question from model
+    public void getFirstQuestion(){
+
+    }
+
     //All the mothods that create handlers, defines what all the buttons and interfaces do
     public AddStatementToArea addStatementToArea(){
         return new AddStatementToArea();
@@ -75,7 +80,7 @@ public class Controller implements Subject {
     }
 
     public StartQuiz startQuiz(){
-        return new StartQuiz();
+        return new StartQuiz(this);
     }
 
     public SubmitAnswer submitAnswer(){
@@ -107,14 +112,14 @@ public class Controller implements Subject {
     }
 
     @Override
-    public void notifyObservers(String message, String question, ArrayList<String> answers) {
+    public void notifyObservers() {
         for (Observer observer: getObservers()){
-            observer.update(message, question, answers);
+            observer.update(getMessage(), getQuestion(), getAnswers());
         }
     }
 
     private void dataChanged(){
-        notifyObservers(getMessage(), getQuestion(), getAnswers());
+        notifyObservers();
     }
 
     //getters and setters

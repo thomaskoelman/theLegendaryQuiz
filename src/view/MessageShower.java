@@ -11,6 +11,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
+import java.util.ArrayList;
+
 public class MessageShower extends GridPane implements Observer {
     private Subject controller;
     private Button startQuizButton;
@@ -49,7 +51,7 @@ public class MessageShower extends GridPane implements Observer {
 
     //methods of the observer pattern
     @Override
-    public void update(String message) {
+    public void update(String message, String question, ArrayList<String> answers) {
         setMessage(message);
     }
 
