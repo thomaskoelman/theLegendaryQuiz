@@ -3,12 +3,15 @@ package view;
 import controller.Controller;
 import controller.observerPattern.Observer;
 import controller.observerPattern.Subject;
+import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
+import model.domain.categories.Category;
+import model.domain.questions.Question;
 
 import java.util.ArrayList;
 
@@ -63,7 +66,7 @@ public class QuestionShower extends GridPane implements Observer {
 
     //implements methods of the observer pattern
     @Override
-    public void update(String message, String question, ArrayList<String> answers) {
+    public void update(String message, String question, ArrayList<String> answers, ObservableList<Category> categories, ObservableList<Question> questions) {
         updateComponents(question, answers);
     }
 }

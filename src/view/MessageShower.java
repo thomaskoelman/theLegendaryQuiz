@@ -4,12 +4,15 @@ package view;
 import controller.Controller;
 import controller.observerPattern.Observer;
 import controller.observerPattern.Subject;
+import javafx.collections.ObservableList;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import model.domain.categories.Category;
+import model.domain.questions.Question;
 
 import java.util.ArrayList;
 
@@ -31,7 +34,7 @@ public class MessageShower extends GridPane implements Observer {
         add(this.startQuizButton, 0, 2, 2, 1);
         add(this.message, 1, 0, 1, 1);
 
-        //add workings of the button
+        //add workings of the buttons
         this.startQuizButton.setOnAction(controller.startQuiz());
 
         //layout
@@ -51,7 +54,7 @@ public class MessageShower extends GridPane implements Observer {
 
     //methods of the observer pattern
     @Override
-    public void update(String message, String question, ArrayList<String> answers) {
+    public void update(String message, String question, ArrayList<String> answers, ObservableList<Category> categories, ObservableList<Question> questions) {
         setMessage(message);
     }
 

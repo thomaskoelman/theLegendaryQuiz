@@ -3,11 +3,14 @@ package controller;
 import controller.handlers.*;
 import controller.observerPattern.Observer;
 import controller.observerPattern.Subject;
+import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.domain.Quiz;
+import model.domain.categories.Category;
+import model.domain.questions.Question;
 import view.*;
 
 import javax.swing.*;
@@ -19,6 +22,8 @@ public class Controller implements Subject {
     private String message;
     private String question;
     private ArrayList<String> answers;
+    private ObservableList<Category> categories;
+    private ObservableList<Question> questions;
 
     public Controller(){
         setObservers();
@@ -54,13 +59,18 @@ public class Controller implements Subject {
 
     }
 
+    //in the combobox of the category creator we have to list all main categories, so we need to retrieve them
+    public ObservableList<Category> getMainCategories(){
+        return null;
+    }
+
     //All the mothods that create handlers, defines what all the buttons and interfaces do
     public AddStatementToArea addStatementToArea(){
         return new AddStatementToArea();
     }
 
     public OpenNewCategoryCreator openNewCategoryCreator(){
-        return new OpenNewCategoryCreator();
+        return new OpenNewCategoryCreator(this);
     }
 
     public CloseWindow closeWindow(){
@@ -114,7 +124,7 @@ public class Controller implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer: getObservers()){
-            observer.update(getMessage(), getQuestion(), getAnswers());
+            observer.update(getMessage(), getQuestion(), getAnswers(), getCategories(), getQuestions());
         }
     }
 
@@ -165,9 +175,27 @@ public class Controller implements Subject {
         this.answers = answers;
     }
 
-    public void setQuestionAndAnswer(String question, ArrayList<String> answers){
+    public void setQuestionAndAnswers(String question, ArrayList<String> answers){
         setQuestion(question);
         setAnswers(answers);
+        dataChanged();
+    }
+
+    public ObservableList<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(ObservableList<Category> categories) {
+        this.categories = categories;
+        dataChanged();
+    }
+
+    public ObservableList<Question> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(ObservableList<Question> questions) {
+        this.questions = questions;
         dataChanged();
     }
 }
