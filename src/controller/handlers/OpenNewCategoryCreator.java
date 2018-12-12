@@ -15,9 +15,9 @@ public class OpenNewCategoryCreator implements EventHandler<ActionEvent> {
     }
     @Override
     public void handle(ActionEvent event) {
-        CategoryCreator categoryCreator = new CategoryCreator(getController());
-        Scene scene = new Scene(categoryCreator);
         Stage stage = new Stage();
+        CategoryCreator categoryCreator = new CategoryCreator(getController(), stage);
+        Scene scene = new Scene(categoryCreator);
         stage.setScene(scene);
         stage.show();
     }

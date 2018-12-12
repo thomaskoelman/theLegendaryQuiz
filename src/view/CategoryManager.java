@@ -2,6 +2,7 @@ package view;
 
 
 import controller.Controller;
+import controller.handlers.OpenNewCategoryCreator;
 import controller.observerPattern.Observer;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
@@ -43,7 +44,7 @@ public class CategoryManager extends GridPane implements Observer {
         add(this.addCategoryButton, 0, 11, 1, 1);
 
         //define actions of buttons
-        this.addCategoryButton.setOnAction(controller.openNewCategoryCreator());
+        this.addCategoryButton.setOnAction(new OpenNewCategoryCreator(controller));
 
         //layout
         this.setPadding(new Insets(5, 5, 5, 5));

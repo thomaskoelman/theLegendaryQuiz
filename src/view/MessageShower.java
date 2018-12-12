@@ -2,6 +2,7 @@ package view;
 
 
 import controller.Controller;
+import controller.handlers.StartQuiz;
 import controller.observerPattern.Observer;
 import controller.observerPattern.Subject;
 import javafx.collections.ObservableList;
@@ -35,7 +36,7 @@ public class MessageShower extends GridPane implements Observer {
         add(this.message, 1, 0, 1, 1);
 
         //add workings of the buttons
-        this.startQuizButton.setOnAction(controller.startQuiz());
+        this.startQuizButton.setOnAction(new StartQuiz(controller));
 
         //layout
         setHalignment(this.startQuizButton, HPos.CENTER);

@@ -1,6 +1,7 @@
 package view;
 
 import controller.Controller;
+import controller.handlers.OpenNewQuestionCreator;
 import controller.observerPattern.Observer;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
@@ -42,7 +43,7 @@ public class QuestionManager extends GridPane implements Observer {
         add(this.addQuestionButton, 0, 11, 1, 1);
 
         //add workings of the buttons
-        this.addQuestionButton.setOnAction(controller.openNewQuestionCreator());
+        this.addQuestionButton.setOnAction(new OpenNewQuestionCreator(controller));
 
         //layout
         this.setPadding(new Insets(5, 5, 5, 5));

@@ -1,6 +1,7 @@
 package view;
 
 import controller.Controller;
+import controller.handlers.SubmitAnswer;
 import controller.observerPattern.Observer;
 import controller.observerPattern.Subject;
 import javafx.collections.ObservableList;
@@ -35,7 +36,7 @@ public class QuestionShower extends GridPane implements Observer {
         controller.notifyObservers();
 
         //assign the actions to the buttons and other interactions
-        this.submitAnswerButton.setOnAction(controller.submitAnswer());
+        this.submitAnswerButton.setOnAction(new SubmitAnswer());
 
         //layout
         this.setPrefHeight(300);

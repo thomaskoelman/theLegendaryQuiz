@@ -1,21 +1,24 @@
 package view;
 
 import controller.Controller;
+import controller.handlers.CloseWindow;
+import controller.handlers.SaveCategory;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 import model.domain.categories.Category;
 
 public class CategoryCreator extends GridPane {
     private Button confirmButton, cancelButton;
     private TextField nameField, descriptionField;
     private ComboBox<Category> categoryField;
-    private Controller controller;
 
-    public CategoryCreator(Controller controller){
+    public CategoryCreator(Controller controller, Stage stage){
+
         //create objects that will be part of the window
         Label nameLabel = new Label("Name:");
         Label descriptionLabel = new Label("Description:");
@@ -38,8 +41,8 @@ public class CategoryCreator extends GridPane {
         add(this.confirmButton, 1, 3, 1, 1);
 
         //define what the buttons do
-        this.confirmButton.setOnAction(controller.saveCategory());
-        this.cancelButton.setOnAction(controller.closeWindow());
+        this.confirmButton.setOnAction(new SaveCategory());
+        this.cancelButton.setOnAction(new CloseWindow(stage));
 
         //layout
         this.setPrefHeight(150);

@@ -1,6 +1,5 @@
 package controller;
 
-import controller.handlers.*;
 import controller.observerPattern.Observer;
 import controller.observerPattern.Subject;
 import javafx.collections.ObservableList;
@@ -64,49 +63,9 @@ public class Controller implements Subject {
         return null;
     }
 
-    //All the mothods that create handlers, defines what all the buttons and interfaces do
-    public AddStatementToArea addStatementToArea(){
-        return new AddStatementToArea();
-    }
+    //controller receives data from view and must create a question to add to the database
+    public void saveQuestion(){
 
-    public OpenNewCategoryCreator openNewCategoryCreator(){
-        return new OpenNewCategoryCreator(this);
-    }
-
-    public CloseWindow closeWindow(){
-        return new CloseWindow();
-    }
-
-    public SaveCategory saveCategory(){
-        return new SaveCategory();
-    }
-
-    public OpenNewQuestionCreator openNewQuestionCreator(){
-        return new OpenNewQuestionCreator();
-    }
-
-    public SaveQuestion saveQuestion(){
-        return new SaveQuestion();
-    }
-
-    public StartQuiz startQuiz(){
-        return new StartQuiz(this);
-    }
-
-    public SubmitAnswer submitAnswer(){
-        return new SubmitAnswer();
-    }
-
-    public ChangeFeedbackType changeFeedbackType(){
-        return new ChangeFeedbackType();
-    }
-
-    public ChangeCategory changeCategory(){
-        return new ChangeCategory();
-    }
-
-    public ChangeQuestion changeQuestion(){
-        return new ChangeQuestion();
     }
 
 
