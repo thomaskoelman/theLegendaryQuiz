@@ -2,6 +2,7 @@ package controller;
 
 import controller.observerPattern.Observer;
 import controller.observerPattern.Subject;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -9,6 +10,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.domain.Quiz;
 import model.domain.categories.Category;
+import model.domain.categories.MainCategory;
+import model.domain.factories.CategoryFactory;
 import model.domain.questions.Question;
 import view.*;
 
@@ -25,8 +28,10 @@ public class Controller implements Subject {
     private ObservableList<Question> questions;
 
     public Controller(){
-        setObservers();
+        this.observers = new ArrayList<>();
         setQuiz();
+        ObservableList<Category> categories = readCategories();
+        setCategories(categories);
     }
 
     //all the initialisation of the application: creating the base panels and root
@@ -59,8 +64,20 @@ public class Controller implements Subject {
     }
 
     //in the combobox of the category creator we have to list all main categories, so we need to retrieve them
-    public ObservableList<Category> getMainCategories(){
-        return null;
+    public ObservableList<MainCategory> getMainCategories(){
+        return FXCollections.observableArrayList(getQuiz().getMainCategories());
+    }
+
+    //controller receives data from view and must create a category to add to the database
+    public void saveCategory(String name, String description, MainCategory mainCategory){
+        Category category = CategoryFactory.createCategory(name, description, mainCategory);
+        ArrayList<Category> updatedCategories = getQuiz().saveCategory(category);
+        setCategories(FXCollections.observableArrayList(updatedCategories));
+    }
+
+    //the controller has to read the categories from the database before the category manager is initialised, so the tabel shows correctly
+    private ObservableList<Category> readCategories(){
+        return FXCollections.observableArrayList(getQuiz().readCategories());
     }
 
     //controller receives data from view and must create a question to add to the database
@@ -105,10 +122,6 @@ public class Controller implements Subject {
         return observers;
     }
 
-    private void setObservers() {
-        this.observers = new ArrayList<>();
-    }
-
     public String getMessage() {
         return message;
     }
@@ -122,27 +135,20 @@ public class Controller implements Subject {
         return question;
     }
 
-    private void setQuestion(String question) {
-        this.question = question;
-    }
-
     public ArrayList<String> getAnswers() {
         return answers;
     }
 
-    private void setAnswers(ArrayList<String> answers) {
-        this.answers = answers;
-    }
-
     public void setQuestionAndAnswers(String question, ArrayList<String> answers){
-        setQuestion(question);
-        setAnswers(answers);
+        this.question = question;
+        this.answers = answers;
         dataChanged();
     }
 
     public ObservableList<Category> getCategories() {
         return categories;
     }
+
 
     public void setCategories(ObservableList<Category> categories) {
         this.categories = categories;

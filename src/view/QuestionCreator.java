@@ -2,10 +2,10 @@ package view;
 
 
 import controller.Controller;
-import controller.handlers.AddStatementToArea;
 import controller.handlers.CloseWindow;
-import controller.handlers.RemoveStatementFromArea;
 import controller.handlers.SaveQuestion;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
@@ -65,8 +65,8 @@ public class QuestionCreator extends GridPane {
         add(this.addQuestionButton, 1, 12, 2, 1);
 
         //define what the buttons do
-        this.addStatementButton.setOnAction(new AddStatementToArea(this.statementField, this.statementsArea));
-        this.removeStatementButton.setOnAction(new RemoveStatementFromArea(this.statementsArea));
+        this.addStatementButton.setOnAction(new AddStatementToArea());
+        this.removeStatementButton.setOnAction(new RemoveStatementFromArea());
         this.cancelButton.setOnAction(new CloseWindow(stage));
         this.addQuestionButton.setOnAction(new SaveQuestion(stage, controller, this.questionField, this.statementsArea, this.categoryField, this.puntenField, this.feedbackField));
 
@@ -78,4 +78,34 @@ public class QuestionCreator extends GridPane {
         this.setHgap(5);
     }
 
+
+   /* unlike the other handlers, following handlers are part of view. They are no part of the controller
+    because they contain no logic to be flushed to the model. Scope and context remain limited to current questioncreator
+   */
+    private class AddStatementToArea implements EventHandler<ActionEvent> {
+        @Override
+        public void handle(ActionEvent event) {
+            String statement = statementField.getText();
+            if (statement != null && !statement.trim().isEmpty()){
+                statementsArea.appendText(statement + "\n");
+                statementField.clear();
+            }
+        }
+    }
+
+    private class RemoveStatementFromArea implements EventHandler<ActionEvent> {
+        @Override
+        public void handle(ActionEvent event) {
+            String statements = statementsArea.getText();
+            String[] statementList = statements.split("\n");
+            String selection = statementsArea.getSelectedText();
+            String replacement = "";
+            for (String statement: statementList){
+                if (!statement.equals(selection)){
+                    replacement += statement + "\n";
+                }
+            }
+            statementsArea.replaceText(0, statements.length(), replacement);
+        }
+    }
 }

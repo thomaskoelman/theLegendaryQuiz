@@ -28,6 +28,7 @@ public class SaveQuestion implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
+        //check if input is valid, send only valid input to controller
         getController().saveQuestion();
     }
 

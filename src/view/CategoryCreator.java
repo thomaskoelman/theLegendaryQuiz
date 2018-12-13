@@ -10,12 +10,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import model.domain.categories.Category;
+import model.domain.categories.MainCategory;
 
 public class CategoryCreator extends GridPane {
     private Button confirmButton, cancelButton;
     private TextField nameField, descriptionField;
-    private ComboBox<Category> categoryField;
+    private ComboBox<MainCategory> categoryField;
 
     public CategoryCreator(Controller controller, Stage stage){
 
@@ -41,7 +41,7 @@ public class CategoryCreator extends GridPane {
         add(this.confirmButton, 1, 3, 1, 1);
 
         //define what the buttons do
-        this.confirmButton.setOnAction(new SaveCategory());
+        this.confirmButton.setOnAction(new SaveCategory(controller, this.nameField, this.descriptionField, this.categoryField, stage));
         this.cancelButton.setOnAction(new CloseWindow(stage));
 
         //layout
