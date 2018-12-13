@@ -2,46 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/files/categories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/db/CategoryDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/db/CategoryTXT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/db/DbException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/db/QuestionDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/db/QuestionTXT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/domain/factories/CategoryFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheLegendaryQuiz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TheLegendaryQuiz.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/controller/handlers/AddStatementToArea.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/controller/handlers/OpenNewQuestionCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/controller/handlers/OpenNewQuestionCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/controller/handlers/SaveCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/controller/handlers/SaveCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/controller/handlers/SaveQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/controller/handlers/SaveQuestion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/db/DBexcel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/db/DBtxt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/db/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/domain/Facade.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/domain/Quiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/domain/Quiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/domain/categories/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/domain/categories/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/domain/categories/MainCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/domain/categories/MainCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/domain/categories/SubCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/domain/categories/SubCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/view/CategoryCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/view/CategoryCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/view/QuestionCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/view/QuestionCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/handlers/AddStatementToArea.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/handlers/OpenNewQuestionCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/handlers/OpenNewQuestionCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/handlers/RemoveStatementFromArea.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/handlers/SaveCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/handlers/SaveCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/handlers/SaveQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/handlers/SaveQuestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/db/DBexcel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/db/DBtxt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/db/Database.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/domain/Facade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/domain/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/Quiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/domain/categories/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/categories/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/domain/categories/MainCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/categories/MainCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/domain/categories/SubCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/categories/SubCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/CategoryCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CategoryCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/QuestionCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/QuestionCreator.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -141,25 +103,25 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="40" />
-          <entry key="java" value="9691" />
+          <entry key="java" value="9751" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9691" />
+          <entry key="JAVA" value="9751" />
           <entry key="PLAIN_TEXT" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="100" />
+          <entry key="java" value="102" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="100" />
+          <entry key="JAVA" value="102" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
@@ -170,7 +132,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="311">
@@ -179,6 +141,28 @@
                 <element signature="e#3455#3456#0" expanded="true" />
                 <element signature="e#3488#3489#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/domain/categories/MainCategory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+              <folding>
+                <element signature="e#137#138#0" expanded="true" />
+                <element signature="e#177#178#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/domain/categories/Category.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -253,19 +237,19 @@
         <option value="$PROJECT_DIR$/src/model/db/CategoriesExcel.java" />
         <option value="$PROJECT_DIR$/src/model/db/QuestionDB.java" />
         <option value="$PROJECT_DIR$/src/model/db/QuestionTXT.java" />
-        <option value="$PROJECT_DIR$/src/model/domain/categories/MainCategory.java" />
         <option value="$PROJECT_DIR$/src/model/domain/factories/CategoryFactory.java" />
         <option value="$PROJECT_DIR$/src/controller/handlers/SaveCategory.java" />
         <option value="$PROJECT_DIR$/src/view/CategoryCreator.java" />
         <option value="$PROJECT_DIR$/src/model/domain/categories/SubCategory.java" />
         <option value="$PROJECT_DIR$/src/model/db/DbException.java" />
         <option value="$PROJECT_DIR$/src/model/db/CategoryTXT.java" />
-        <option value="$PROJECT_DIR$/src/model/domain/categories/Category.java" />
         <option value="$PROJECT_DIR$/src/application/App.java" />
         <option value="$PROJECT_DIR$/files/categories.txt" />
         <option value="$PROJECT_DIR$/src/model/domain/Quiz.java" />
         <option value="$PROJECT_DIR$/src/model/db/CategoryDB.java" />
         <option value="$PROJECT_DIR$/src/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/model/domain/categories/MainCategory.java" />
+        <option value="$PROJECT_DIR$/src/model/domain/categories/Category.java" />
       </list>
     </option>
   </component>
@@ -387,7 +371,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544740792062" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544741503114" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Groepswerk/OOO_Project" />
     <property name="recentsLimit" value="5" />
@@ -522,12 +506,12 @@
       <workItem from="1544552631906" duration="10893000" />
       <workItem from="1544563986296" duration="13018000" />
       <workItem from="1544642968553" duration="14123000" />
-      <workItem from="1544720708320" duration="17974000" />
+      <workItem from="1544720708320" duration="18217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61714000" />
+    <option name="totallyTimeSpent" value="61957000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -945,19 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/domain/categories/MainCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="e#137#138#0" expanded="true" />
-            <element signature="e#177#178#0" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/CategoryCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-204">
@@ -1002,13 +973,6 @@
     <entry file="file://$PROJECT_DIR$/categories.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-615" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/domain/categories/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/App.java">
@@ -1080,6 +1044,24 @@
             <element signature="e#3455#3456#0" expanded="true" />
             <element signature="e#3488#3489#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/domain/categories/MainCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <element signature="e#137#138#0" expanded="true" />
+            <element signature="e#177#178#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/domain/categories/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
         </state>
       </provider>
     </entry>

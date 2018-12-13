@@ -32,4 +32,10 @@ public abstract class Category implements Serializable {
     public String getDescription(){
         return this.description;
     }
+
+    //necessary to display categories properly in comboboxes
+    @Override
+    public String toString(){
+        return getName();
+    }
 }
