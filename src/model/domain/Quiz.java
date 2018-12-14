@@ -7,6 +7,7 @@ import model.db.QuestionTXT;
 import model.domain.categories.Category;
 import model.domain.categories.MainCategory;
 import model.domain.feedback.Feedback;
+import model.domain.questions.Question;
 import model.domain.states.State;
 
 import java.util.ArrayList;
@@ -41,5 +42,13 @@ public class Quiz {
 
     public ArrayList<Category> readCategories() {
         return getCategoryDB().getCategories();
+    }
+
+    public ArrayList<Question> readQuestions(){
+        return getQuestionDB().getQuestions();
+    }
+
+    public ArrayList<Question> saveQuestion(Question question) {
+        return getQuestionDB().addQuestion(question);
     }
 }

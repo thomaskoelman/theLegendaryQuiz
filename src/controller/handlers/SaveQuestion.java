@@ -9,6 +9,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.domain.categories.Category;
 
+import java.util.ArrayList;
+
 public class SaveQuestion implements EventHandler<ActionEvent> {
     Stage stage;
     Controller controller;
@@ -29,7 +31,23 @@ public class SaveQuestion implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent event) {
         //check if input is valid, send only valid input to controller
-        getController().saveQuestion();
+        String question = getQuestionField().getText();
+        ArrayList<String> answers = stringToArrayList(getStatementsArea().getText());
+        Category category = getCategoryField().getValue();
+        String feedback = getFeedbackField().getText();
+        int points = Integer.parseInt(getPuntenField().getText());
+        getController().saveQuestion(question, answers, category, feedback, points);
+        getStage().close();
+    }
+
+    private ArrayList<String> stringToArrayList(String areaField){
+        String text = getStatementsArea().getText();
+        ArrayList<String> answers = new ArrayList<>();
+        String[] antwoorden = text.split("\n");
+        for (String s: antwoorden){
+            answers.add(s);
+        }
+        return answers;
     }
 
     //getters

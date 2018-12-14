@@ -12,6 +12,7 @@ import model.domain.Quiz;
 import model.domain.categories.Category;
 import model.domain.categories.MainCategory;
 import model.domain.factories.CategoryFactory;
+import model.domain.factories.QuestionFactory;
 import model.domain.questions.Question;
 import view.*;
 
@@ -32,6 +33,8 @@ public class Controller implements Subject {
         setQuiz();
         ObservableList<Category> categories = readCategories();
         setCategories(categories);
+        ObservableList<Question> questions = readQuestions();
+        setQuestions(questions);
     }
 
     //all the initialisation of the application: creating the base panels and root
@@ -75,14 +78,21 @@ public class Controller implements Subject {
         setCategories(FXCollections.observableArrayList(updatedCategories));
     }
 
-    //the controller has to read the categories from the database before the category manager is initialised, so the tabel shows correctly
+    //the controller has to read the categories from the database before the category manager is initialised, so the table shows correctly
     private ObservableList<Category> readCategories(){
         return FXCollections.observableArrayList(getQuiz().readCategories());
     }
 
-    //controller receives data from view and must create a question to add to the database
-    public void saveQuestion(){
+    //the controller has to read the questions from the database before the question manager is initialised, so the table shows correctly
+    private ObservableList<Question> readQuestions(){
+        return FXCollections.observableArrayList(getQuiz().readQuestions());
+    }
 
+    //controller receives data from view and must create a question to add to the database
+    public void saveQuestion(String question, ArrayList<String> answers, Category category, String feedback, int points){
+        Question questionObject = QuestionFactory.createQuestion(question, answers, category, feedback, points);
+        ArrayList<Question> updatedQuestions = getQuiz().saveQuestion(questionObject);
+        setQuestions(FXCollections.observableArrayList(updatedQuestions));
     }
 
 

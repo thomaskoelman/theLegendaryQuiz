@@ -29,9 +29,9 @@ public class QuestionManager extends GridPane implements Observer {
         //table
         this.table = new TableView<>();
         TableColumn<Question, String> phrasingColumn = new TableColumn<>("Question");
-        TableColumn<Question, String> categoryColumn = new TableColumn<>("Category");
-        phrasingColumn.setCellValueFactory(new PropertyValueFactory<Question, String>("phrase"));
-        categoryColumn.setCellValueFactory(new PropertyValueFactory<Question, String>("categoryName"));
+        TableColumn<Question, Category> categoryColumn = new TableColumn<>("Category");
+        phrasingColumn.setCellValueFactory(new PropertyValueFactory<Question, String>("question"));
+        categoryColumn.setCellValueFactory(new PropertyValueFactory<Question, Category>("category"));
         this.table.getColumns().add(phrasingColumn);
         this.table.getColumns().add(categoryColumn);
         this.table.setItems(controller.getQuestions());
@@ -51,7 +51,7 @@ public class QuestionManager extends GridPane implements Observer {
         this.setHgap(5);
         table.setPrefWidth(REMAINING);
         phrasingColumn.setPrefWidth(600);
-        categoryColumn.setPrefWidth(150);
+        categoryColumn.setPrefWidth(120);
     }
 
     @Override

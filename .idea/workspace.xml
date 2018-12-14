@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/model/domain/factories/QuestionFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/domain/Quiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/domain/Quiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/handlers/SaveQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/handlers/SaveQuestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/db/QuestionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/db/QuestionDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/db/QuestionTXT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/db/QuestionTXT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/domain/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/Quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/domain/questions/JaNee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/questions/JaNee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/domain/questions/Multiplechoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/questions/Multiplechoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/domain/questions/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/questions/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/QuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/QuestionManager.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,33 +108,35 @@
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="40" />
-          <entry key="java" value="9751" />
-          <entry key="txt" value="5" />
+          <entry key="java" value="11844" />
+          <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9751" />
-          <entry key="PLAIN_TEXT" value="45" />
+          <entry key="JAVA" value="11844" />
+          <entry key="PLAIN_TEXT" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="103" />
-          <entry key="txt" value="8" />
+          <entry key="gitignore" value="1" />
+          <entry key="java" value="120" />
+          <entry key="txt" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="103" />
-          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="JAVA" value="120" />
+          <entry key="PLAIN_TEXT" value="11" />
         </counts>
       </usages-collector>
     </session>
@@ -132,42 +146,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="77" column="138" selection-start-line="77" selection-start-column="138" selection-end-line="77" selection-end-column="138" />
+            <state relative-caret-position="451">
+              <caret line="94" column="71" selection-start-line="94" selection-start-column="71" selection-end-line="94" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/domain/categories/MainCategory.java">
+        <entry file="file://$PROJECT_DIR$/src/model/domain/questions/Question.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+            <state relative-caret-position="-289">
+              <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
               <folding>
-                <element signature="e#137#138#0" expanded="true" />
-                <element signature="e#177#178#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1780#1781#0" expanded="true" />
+                <element signature="e#1811#1812#0" expanded="true" />
+                <element signature="e#1856#1857#0" expanded="true" />
+                <element signature="e#1886#1887#0" expanded="true" />
+                <element signature="e#1923#1924#0" expanded="true" />
+                <element signature="e#1954#1955#0" expanded="true" />
+                <element signature="e#1989#1990#0" expanded="true" />
+                <element signature="e#2020#2021#0" expanded="true" />
+                <element signature="e#2050#2051#0" expanded="true" />
+                <element signature="e#2079#2080#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/domain/categories/Category.java">
+        <entry file="file://$PROJECT_DIR$/src/view/QuestionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/db/CategoryTXT.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="225">
+              <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -175,16 +189,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/files/categories.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/handlers/OpenNewQuestionCreator.java">
+        <entry file="file://$PROJECT_DIR$/src/view/QuestionShower.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+            <state relative-caret-position="276">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,9 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/view/CategoryOverviewPane.java" />
-        <option value="$PROJECT_DIR$/src/view/QuestionOverviewPane.java" />
-        <option value="$PROJECT_DIR$/src/model/domain/states/Finished.java" />
         <option value="$PROJECT_DIR$/src/model/domain/states/NeverStarted.java" />
         <option value="$PROJECT_DIR$/src/model/domain/states/Underway.java" />
         <option value="$PROJECT_DIR$/src/view/ShowsMessagesToYou.java" />
@@ -226,9 +235,6 @@
         <option value="$PROJECT_DIR$/src/model/domain/feedback/DivideByTwoAlgorithm.java" />
         <option value="$PROJECT_DIR$/src/model/domain/feedback/ChanceToLoseInstantlyAlgorithm.java" />
         <option value="$PROJECT_DIR$/src/model/Category.java" />
-        <option value="$PROJECT_DIR$/src/model/domain/questions/Question.java" />
-        <option value="$PROJECT_DIR$/src/model/domain/questions/JaNee.java" />
-        <option value="$PROJECT_DIR$/src/model/domain/questions/Multiplechoice.java" />
         <option value="$PROJECT_DIR$/src/view/Navigator.java" />
         <option value="$PROJECT_DIR$/src/controller/observerPattern/Subject.java" />
         <option value="$PROJECT_DIR$/src/controller/handlers/StartQuiz.java" />
@@ -236,20 +242,16 @@
         <option value="$PROJECT_DIR$/src/view/MessageShower.java" />
         <option value="$PROJECT_DIR$/src/view/QuestionShower.java" />
         <option value="$PROJECT_DIR$/src/view/CategoryManager.java" />
-        <option value="$PROJECT_DIR$/src/view/QuestionManager.java" />
         <option value="$PROJECT_DIR$/src/controller/handlers/CloseWindow.java" />
         <option value="$PROJECT_DIR$/src/controller/handlers/OpenNewCategoryCreator.java" />
         <option value="$PROJECT_DIR$/src/controller/handlers/RemoveStatementFromArea.java" />
         <option value="$PROJECT_DIR$/src/controller/handlers/OpenNewQuestionCreator.java" />
-        <option value="$PROJECT_DIR$/src/controller/handlers/SaveQuestion.java" />
         <option value="$PROJECT_DIR$/src/view/QuestionCreator.java" />
         <option value="$PROJECT_DIR$/src/controller/handlers/AddStatementToArea.java" />
         <option value="$PROJECT_DIR$/src/model/db/DBtxt.java" />
         <option value="$PROJECT_DIR$/src/model/db/Database.java" />
         <option value="$PROJECT_DIR$/src/model/db/DBexcel.java" />
         <option value="$PROJECT_DIR$/src/model/db/CategoriesExcel.java" />
-        <option value="$PROJECT_DIR$/src/model/db/QuestionDB.java" />
-        <option value="$PROJECT_DIR$/src/model/db/QuestionTXT.java" />
         <option value="$PROJECT_DIR$/src/model/domain/factories/CategoryFactory.java" />
         <option value="$PROJECT_DIR$/src/controller/handlers/SaveCategory.java" />
         <option value="$PROJECT_DIR$/src/view/CategoryCreator.java" />
@@ -257,12 +259,22 @@
         <option value="$PROJECT_DIR$/src/model/db/DbException.java" />
         <option value="$PROJECT_DIR$/src/model/db/CategoryTXT.java" />
         <option value="$PROJECT_DIR$/src/application/App.java" />
-        <option value="$PROJECT_DIR$/src/model/domain/Quiz.java" />
         <option value="$PROJECT_DIR$/src/model/db/CategoryDB.java" />
-        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/model/domain/categories/MainCategory.java" />
         <option value="$PROJECT_DIR$/src/model/domain/categories/Category.java" />
         <option value="$PROJECT_DIR$/files/categories.txt" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/controller/handlers/SaveQuestion.java" />
+        <option value="$PROJECT_DIR$/src/model/domain/questions/JaNee.java" />
+        <option value="$PROJECT_DIR$/src/model/domain/questions/Multiplechoice.java" />
+        <option value="$PROJECT_DIR$/src/model/domain/factories/QuestionFactory.java" />
+        <option value="$PROJECT_DIR$/src/model/domain/Quiz.java" />
+        <option value="$PROJECT_DIR$/src/model/db/QuestionDB.java" />
+        <option value="$PROJECT_DIR$/src/model/db/QuestionTXT.java" />
+        <option value="$PROJECT_DIR$/src/model/domain/questions/Question.java" />
+        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/files/questions.txt" />
+        <option value="$PROJECT_DIR$/src/view/QuestionManager.java" />
       </list>
     </option>
   </component>
@@ -288,7 +300,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -365,6 +376,14 @@
               <item name="theLegendaryQuiz" type="b2602c69:ProjectViewProjectNode" />
               <item name="theLegendaryQuiz" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="questions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="theLegendaryQuiz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theLegendaryQuiz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -372,6 +391,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,7 +404,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544741518343" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544787701036" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Groepswerk/OOO_Project" />
     <property name="recentsLimit" value="5" />
@@ -521,17 +541,18 @@
       <workItem from="1544642968553" duration="14123000" />
       <workItem from="1544720708320" duration="18465000" />
       <workItem from="1544781995260" duration="121000" />
+      <workItem from="1544782220475" duration="5345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62326000" />
+    <option name="totallyTimeSpent" value="67671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.22416107" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.22751679" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -541,7 +562,7 @@
       <window_info id="simpleUML" order="7" weight="0.3295302" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -637,7 +658,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/model/domain/Quiz.java</url>
-          <line>26</line>
+          <line>27</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
@@ -649,27 +670,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/domain/states/NeverStarted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/domain/states/Underway.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/domain/feedback/Tips.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/domain/feedback/NormalScoreCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -714,27 +714,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../TheLegendaryQuiz.uml" />
     <entry file="file://$PROJECT_DIR$/src/model/domain/questions.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/domain/questions/JaNee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/domain/questions/Multiplechoice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/domain/questions/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TheLegendaryQuiz.uml">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -814,26 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/QuestionShower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/QuestionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="45" column="80" selection-start-line="45" selection-start-column="80" selection-end-line="45" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/handlers/OpenNewCategoryCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -877,39 +836,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/handlers/RemoveStatementFromArea.java" />
     <entry file="file://$PROJECT_DIR$/src/controller/handlers/AddStatementToArea.java" />
-    <entry file="file://$PROJECT_DIR$/src/view/QuestionCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="75" lean-forward="true" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/handlers/SaveQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/domain/Facade.java" />
     <entry file="file://$PROJECT_DIR$/src/model/db/Database.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/db/QuestionDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/db/QuestionTXT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/CategoryCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-204">
@@ -969,31 +897,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/domain/Quiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-70">
-          <caret line="13" column="65" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#1036#1037#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/db/CategoryDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="77" column="138" selection-start-line="77" selection-start-column="138" selection-end-line="77" selection-end-column="138" />
         </state>
       </provider>
     </entry>
@@ -1008,20 +915,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/domain/categories/Category.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/db/CategoryTXT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="644">
+          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
         </state>
       </provider>
     </entry>
@@ -1032,8 +929,154 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/QuestionCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="68" column="75" lean-forward="true" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/handlers/SaveQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="37" column="66" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/domain/categories/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/domain/questions/JaNee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/domain/questions/Multiplechoice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/domain/factories/QuestionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/domain/Quiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="51" column="40" lean-forward="true" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1370#1371#0" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/db/QuestionDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/db/CategoryTXT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="69" column="5" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/db/QuestionTXT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/files/categories.txt">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/questions.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/domain/questions/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1780#1781#0" expanded="true" />
+            <element signature="e#1811#1812#0" expanded="true" />
+            <element signature="e#1856#1857#0" expanded="true" />
+            <element signature="e#1886#1887#0" expanded="true" />
+            <element signature="e#1923#1924#0" expanded="true" />
+            <element signature="e#1954#1955#0" expanded="true" />
+            <element signature="e#1989#1990#0" expanded="true" />
+            <element signature="e#2020#2021#0" expanded="true" />
+            <element signature="e#2050#2051#0" expanded="true" />
+            <element signature="e#2079#2080#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/QuestionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/QuestionShower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="94" column="71" selection-start-line="94" selection-start-column="71" selection-end-line="94" selection-end-column="71" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="simpleUML.UMLToolWindowPlugin">
