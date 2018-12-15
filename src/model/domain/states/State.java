@@ -6,5 +6,5 @@ public interface State {
 
     boolean quizCanStart();
 
-    void quizEnds();
+    void quizEnds(State state);
 }

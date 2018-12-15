@@ -125,7 +125,7 @@ public class Quiz {
         this.state = state;
     }
 
-    private State getState(){
+    public State getState(){
         return this.state;
     }
 
@@ -145,7 +145,7 @@ public class Quiz {
         return this.propertyAccess;
     }
 
-    public void quizEnds() {
-        getState().quizEnds();
+    public void quizEnds(State state) {
+        getState().quizEnds(state);
     }
 }

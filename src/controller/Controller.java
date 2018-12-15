@@ -15,6 +15,7 @@ import model.domain.factories.CategoryFactory;
 import model.domain.factories.QuestionFactory;
 import model.domain.feedback.Feedback;
 import model.domain.questions.Question;
+import model.domain.states.State;
 import view.*;
 
 import javax.swing.*;
@@ -91,11 +92,25 @@ public class Controller implements Subject {
             ArrayList<String> answers = question.getAnswers();
             setQuestionAndAnswers(phrase, answers);
         } else {
-            getQuiz().quizEnds();
+            quizEnds(getQuiz().getFinished());
             String feedback = getQuiz().writeFeedback(getAnswersRemembered());
             setMessage(feedback);
             stage.close();
         }
+    }
+
+    //method that lets the quiz end when reaching last question or aborting quiz. sets state to finished
+    public void quizEnds(State state){
+        getQuiz().quizEnds(state);
+    }
+
+    //determine whether you can start another quiz based on your state: when you are already underway, you cannot start again
+    public boolean quizCanStart(){
+        return getQuiz().quizCanStart();
+    }
+
+    public State getState(){
+        return getQuiz().getState();
     }
 
     //every time we hit the submit button during a quiz, we have to store the answer the user chose
@@ -240,4 +255,5 @@ public class Controller implements Subject {
     private ArrayList<Question> getAnswersRemembered(){
         return this.answersRemembered;
     }
+
 }

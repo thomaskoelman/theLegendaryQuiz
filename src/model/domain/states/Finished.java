@@ -26,7 +26,7 @@ public class Finished implements State {
     }
 
     @Override
-    public void quizEnds() {
+    public void quizEnds(State state) {
     }
 
     private Quiz getQuiz() {

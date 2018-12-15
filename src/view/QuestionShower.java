@@ -1,6 +1,7 @@
 package view;
 
 import controller.Controller;
+import controller.handlers.AbortQuiz;
 import controller.handlers.SubmitAnswer;
 import controller.observerPattern.Observer;
 import controller.observerPattern.Subject;
@@ -14,6 +15,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import model.domain.categories.Category;
 import model.domain.questions.Question;
+import model.domain.states.State;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,7 +27,7 @@ public class QuestionShower extends GridPane implements Observer {
     private Button submitAnswerButton;
     private Stage stage;
 
-    public QuestionShower(Controller controller, Stage stage){
+    public QuestionShower(Controller controller, Stage stage, State state){
         this.stage = stage;
 
         //register to the controller as an observer
@@ -42,6 +44,7 @@ public class QuestionShower extends GridPane implements Observer {
 
         //assign the actions to the buttons and other interactions
         this.submitAnswerButton.setOnAction(new SubmitAnswer(controller, stage, this.possibleAnswers));
+        stage.setOnHiding(new AbortQuiz(controller, state));
 
         //layout
         this.setPrefHeight(300);

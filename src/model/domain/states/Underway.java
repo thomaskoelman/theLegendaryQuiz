@@ -25,8 +25,8 @@ public class Underway implements State {
     }
 
     @Override
-    public void quizEnds() {
-       getQuiz().setState(getQuiz().getFinished());
+    public void quizEnds(State state) {
+       getQuiz().setState(state);
     }
 
     private Quiz getQuiz(){
