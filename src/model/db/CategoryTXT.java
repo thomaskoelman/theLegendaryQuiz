@@ -2,6 +2,7 @@ package model.db;
 
 import model.domain.categories.Category;
 import model.domain.categories.MainCategory;
+import model.domain.categories.SubCategory;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -73,6 +74,18 @@ public class CategoryTXT implements CategoryDB{
 
     public ArrayList<Category> getCategories(){
         return this.categories;
+    }
+
+    @Override
+    public ArrayList<SubCategory> getSubCategories() {
+        ArrayList<SubCategory> subCategories = new ArrayList<>();
+        for (Category category: getCategories()){
+            if (category instanceof SubCategory){
+                SubCategory subCategory = (SubCategory) category;
+                subCategories.add(subCategory);
+            }
+        }
+        return subCategories;
     }
 
     private File getFile(){

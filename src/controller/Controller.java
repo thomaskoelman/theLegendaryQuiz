@@ -18,6 +18,8 @@ import view.*;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 
 public class Controller implements Subject {
     private Quiz quiz;
@@ -27,6 +29,9 @@ public class Controller implements Subject {
     private ArrayList<String> answers;
     private ObservableList<Category> categories;
     private ObservableList<Question> questions;
+    private Iterator<Question> questionIterator;
+    private Question currentQuestion;
+    private ArrayList<Question> answersRemembered;
 
     public Controller(){
         this.observers = new ArrayList<>();
@@ -63,7 +68,36 @@ public class Controller implements Subject {
 
     //when we start a new round, the controller must retrieve the first question from model
     public void getFirstQuestion(){
+        ArrayList<Question> shuffledList = new ArrayList<>(getQuestions());
+        Collections.shuffle(shuffledList);
+        this.questionIterator = shuffledList.iterator();
+        this.answersRemembered = new ArrayList<>();
+        Question question = getQuestionIterator().next();
+        setCurrentQuestion(question);
+        String phrase = question.getQuestion();
+        ArrayList<String> answers = question.getAnswers();
+        setQuestionAndAnswers(phrase, answers);
+    }
 
+    //let the questionshower display the next question, unless there is none. In the last case, end the quiz
+    public void getNextQuestion(Stage stage){
+        getAnswersRemembered().add(getCurrentQuestion());
+        if (getQuestionIterator().hasNext()){
+            Question question = getQuestionIterator().next();
+            setCurrentQuestion(question);
+            String phrase = question.getQuestion();
+            ArrayList<String> answers = question.getAnswers();
+            setQuestionAndAnswers(phrase, answers);
+        } else {
+            String feedback = getQuiz().writeFeedback(getAnswersRemembered());
+            setMessage(feedback);
+            stage.close();
+        }
+    }
+
+    //every time we hit the submit button during a quiz, we have to store the answer the user chose
+    public void registerAnswer(String answer){
+        getCurrentQuestion().setCheckedAnswer(answer);
     }
 
     //in the combobox of the category creator we have to list all main categories, so we need to retrieve them
@@ -172,5 +206,21 @@ public class Controller implements Subject {
     public void setQuestions(ObservableList<Question> questions) {
         this.questions = questions;
         dataChanged();
+    }
+
+    private Iterator<Question> getQuestionIterator(){
+        return this.questionIterator;
+    }
+
+    private void setCurrentQuestion(Question question){
+        this.currentQuestion = question;
+    }
+
+    private Question getCurrentQuestion(){
+        return this.currentQuestion;
+    }
+
+    private ArrayList<Question> getAnswersRemembered(){
+        return this.answersRemembered;
     }
 }

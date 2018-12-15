@@ -15,4 +15,8 @@ public class SubCategory extends Category {
         }
         this.mainCategory = mainCategory;
     }
+
+    public MainCategory getMainCategory(){
+        return this.mainCategory;
+    }
 }

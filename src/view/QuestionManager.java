@@ -50,8 +50,8 @@ public class QuestionManager extends GridPane implements Observer {
         this.setVgap(5);
         this.setHgap(5);
         table.setPrefWidth(REMAINING);
-        phrasingColumn.setPrefWidth(600);
-        categoryColumn.setPrefWidth(120);
+        phrasingColumn.setPrefWidth(500);
+        categoryColumn.setPrefWidth(220);
     }
 
     @Override

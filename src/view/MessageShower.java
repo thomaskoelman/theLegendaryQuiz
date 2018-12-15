@@ -49,8 +49,11 @@ public class MessageShower extends GridPane implements Observer {
 
     //the message needs to change dynamically to show feedback and states about the quiz
     private void setMessage(String message){
+        getChildren().remove(this.message);
         this.message = new Label(message);
+        add(this.message, 1,0, 1,1);
     }
+
 
 
     //methods of the observer pattern

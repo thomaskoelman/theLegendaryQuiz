@@ -6,7 +6,9 @@ import model.db.QuestionDB;
 import model.db.QuestionTXT;
 import model.domain.categories.Category;
 import model.domain.categories.MainCategory;
+import model.domain.categories.SubCategory;
 import model.domain.feedback.Feedback;
+import model.domain.feedback.NormalScoreCalculator;
 import model.domain.questions.Question;
 import model.domain.states.State;
 
@@ -22,6 +24,7 @@ public class Quiz {
     public Quiz(){
         this.categoryDB = new CategoryTXT();
         this.questionDB = new QuestionTXT();
+        this.feedback = new NormalScoreCalculator();
     }
 
     public ArrayList<Category> saveCategory(Category category){
@@ -40,6 +43,10 @@ public class Quiz {
         return getCategoryDB().getMainCategories();
     }
 
+    private ArrayList<SubCategory> getSubCategories() {
+        return getCategoryDB().getSubCategories();
+    }
+
     public ArrayList<Category> readCategories() {
         return getCategoryDB().getCategories();
     }
@@ -50,5 +57,13 @@ public class Quiz {
 
     public ArrayList<Question> saveQuestion(Question question) {
         return getQuestionDB().addQuestion(question);
+    }
+
+    public String writeFeedback(ArrayList<Question> questions){
+        return getFeedback().writeFeedback(questions, getMainCategories(), getSubCategories());
+    }
+
+    private Feedback getFeedback(){
+        return this.feedback;
     }
 }

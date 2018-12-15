@@ -11,6 +11,8 @@ public abstract class Question implements Serializable {
     private Category category;
     private String feedback;
     private int points;
+    private String rightAnswer;
+    private String checkedAnswer;
 
     protected Question(String question, ArrayList<String> answers, Category category, String feedback, int points){
         setQuestion(question);
@@ -18,6 +20,7 @@ public abstract class Question implements Serializable {
         setCategory(category);
         setFeedback(feedback);
         setPoints(points);
+        setRightAnswer(answers.get(0));
     }
 
     //setters
@@ -57,6 +60,20 @@ public abstract class Question implements Serializable {
         this.points = points;
     }
 
+    public void setRightAnswer(String answer){
+        if (answer == null || answer.trim().isEmpty()){
+            throw new IllegalArgumentException("the right answer cannot be empty");
+        }
+        this.rightAnswer = answer;
+    }
+
+    public void setCheckedAnswer(String answer){
+        if (answer == null || answer.trim().isEmpty()){
+            throw new IllegalArgumentException("the answer you checked cannot be an empty one");
+        }
+        this.checkedAnswer = answer;
+    }
+
     //getters
 
     public String getQuestion() {
@@ -79,5 +96,11 @@ public abstract class Question implements Serializable {
         return points;
     }
 
+    public String getRightAnswer(){
+        return rightAnswer;
+    }
 
+    public String getCheckedAnswer() {
+        return checkedAnswer;
+    }
 }

@@ -11,18 +11,23 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 import model.domain.categories.Category;
 import model.domain.questions.Question;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class QuestionShower extends GridPane implements Observer {
-    private Subject controller;
+    private Controller controller;
     private Label phrase;
     private ToggleGroup possibleAnswers;
     private Button submitAnswerButton;
+    private Stage stage;
 
-    public QuestionShower(Controller controller){
+    public QuestionShower(Controller controller, Stage stage){
+        this.stage = stage;
+
         //register to the controller as an observer
         this.controller = controller;
         controller.registerObserver(this);
@@ -36,7 +41,7 @@ public class QuestionShower extends GridPane implements Observer {
         controller.notifyObservers();
 
         //assign the actions to the buttons and other interactions
-        this.submitAnswerButton.setOnAction(new SubmitAnswer());
+        this.submitAnswerButton.setOnAction(new SubmitAnswer(controller, stage, this.possibleAnswers));
 
         //layout
         this.setPrefHeight(300);
@@ -53,7 +58,9 @@ public class QuestionShower extends GridPane implements Observer {
         this.phrase = new Label(phrase);
         add(this.phrase, 0, index, 1, 1);
         ToggleGroup radiobuttons = new ToggleGroup();
-        for (String answer: possibleAnswers){
+        ArrayList<String> shuffledAnswers = new ArrayList<>(possibleAnswers);
+        Collections.shuffle(shuffledAnswers);
+        for (String answer: shuffledAnswers){
             index++;
             RadioButton button = new RadioButton(answer);
             button.setUserData(answer);
@@ -63,11 +70,20 @@ public class QuestionShower extends GridPane implements Observer {
         this.possibleAnswers = radiobuttons;
         index++;
         add(this.submitAnswerButton, 0, index, 1, 1);
+        this.submitAnswerButton.setOnAction(new SubmitAnswer(getController(), getStage(), this.possibleAnswers));
     }
 
     //implements methods of the observer pattern
     @Override
     public void update(String message, String question, ArrayList<String> answers, ObservableList<Category> categories, ObservableList<Question> questions) {
         updateComponents(question, answers);
+    }
+
+    private Controller getController(){
+        return this.controller;
+    }
+
+    private Stage getStage(){
+        return this.stage;
     }
 }
