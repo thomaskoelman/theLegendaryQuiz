@@ -16,12 +16,15 @@ public class StartQuiz implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
-        getController().getFirstQuestion();
-        Stage stage = new Stage();
-        QuestionShower questionShower = new QuestionShower(getController(), stage);
-        Scene scene = new Scene(questionShower);
-        stage.setScene(scene);
-        stage.show();
+        if (getController().getQuiz().quizCanStart()){
+            getController().getFirstQuestion();
+            Stage stage = new Stage();
+            QuestionShower questionShower = new QuestionShower(getController(), stage);
+            Scene scene = new Scene(questionShower);
+            stage.setScene(scene);
+            stage.show();
+        }
+
     }
 
     private Controller getController() {

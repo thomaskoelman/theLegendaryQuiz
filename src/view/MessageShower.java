@@ -45,6 +45,8 @@ public class MessageShower extends GridPane implements Observer {
         this.setHgap(5);
         setBorder(new Border(new BorderStroke(Color.BLACK,
                 BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
+
+        controller.notifyObservers();
     }
 
     //the message needs to change dynamically to show feedback and states about the quiz

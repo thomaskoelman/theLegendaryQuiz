@@ -3,6 +3,8 @@ package model.configurations;
 import model.domain.feedback.Feedback;
 import model.domain.feedback.FeedbackTypes;
 import model.domain.feedback.NormalScoreCalculator;
+import model.domain.states.State;
+import model.domain.states.StateTypes;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -30,6 +32,17 @@ public class PropertyAccess {
 
     }
 
+    public void writeStateToProperties(State state){
+        Properties properties = readProperties();
+        properties.setProperty("state", state.toString());
+        try{
+            FileOutputStream outputStream = new FileOutputStream(getFile());
+            properties.store(outputStream, null);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     private Properties readProperties(){
         Properties properties = new Properties();
         try {
@@ -37,6 +50,11 @@ public class PropertyAccess {
             properties.load(inputStream);
             if (!properties.containsKey("feedback")){
                 properties.setProperty("feedback", new NormalScoreCalculator().toString());
+                FileOutputStream outputStream = new FileOutputStream(getFile());
+                properties.store(outputStream, null);
+            }
+            if (!properties.containsKey("state")){
+                properties.setProperty("state", "NeverStarted");
                 FileOutputStream outputStream = new FileOutputStream(getFile());
                 properties.store(outputStream, null);
             }
@@ -56,6 +74,11 @@ public class PropertyAccess {
             }
         }
         return feedback;
+    }
+
+    public String getState(){
+        String state = getProperties().getProperty("state");
+        return state;
     }
 
     private Properties getProperties(){

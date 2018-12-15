@@ -41,6 +41,7 @@ public class Controller implements Subject {
         setCategories(categories);
         ObservableList<Question> questions = readQuestions();
         setQuestions(questions);
+        setMessage(getQuiz().getMessage());
     }
 
     //all the initialisation of the application: creating the base panels and root
@@ -90,6 +91,7 @@ public class Controller implements Subject {
             ArrayList<String> answers = question.getAnswers();
             setQuestionAndAnswers(phrase, answers);
         } else {
+            getQuiz().quizEnds();
             String feedback = getQuiz().writeFeedback(getAnswersRemembered());
             setMessage(feedback);
             stage.close();
