@@ -18,4 +18,9 @@ public class Tips implements Feedback {
         }
         return feedback;
     }
+
+    @Override
+    public String toString() {
+        return "Tips";
+    }
 }

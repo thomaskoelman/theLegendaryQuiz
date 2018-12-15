@@ -13,6 +13,7 @@ import model.domain.categories.Category;
 import model.domain.categories.MainCategory;
 import model.domain.factories.CategoryFactory;
 import model.domain.factories.QuestionFactory;
+import model.domain.feedback.Feedback;
 import model.domain.questions.Question;
 import view.*;
 
@@ -105,6 +106,15 @@ public class Controller implements Subject {
         return FXCollections.observableArrayList(getQuiz().getMainCategories());
     }
 
+    //in the combobox of the question manager we have to list all possibilities of feedback, so we need to retrieve them
+    public ObservableList<Feedback> getFeedbackTypes(){
+        return FXCollections.observableArrayList(getQuiz().getFeedbackTypes());
+    }
+
+    public Feedback getFeedbackType(){
+        return getQuiz().getFeedback();
+    }
+
     //controller receives data from view and must create a category to add to the database
     public void saveCategory(String name, String description, MainCategory mainCategory){
         Category category = CategoryFactory.createCategory(name, description, mainCategory);
@@ -129,6 +139,11 @@ public class Controller implements Subject {
         setQuestions(FXCollections.observableArrayList(updatedQuestions));
     }
 
+    //when the feedback type is changed, the controller receives the new type and sets the quiz to that type
+    public Feedback changeFeedbackType(Feedback feedback){
+        getQuiz().setFeedback(feedback);
+        return feedback;
+    }
 
     //These are the methods that implement the observer pattern
     @Override

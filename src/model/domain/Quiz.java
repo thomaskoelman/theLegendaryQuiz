@@ -8,6 +8,7 @@ import model.domain.categories.Category;
 import model.domain.categories.MainCategory;
 import model.domain.categories.SubCategory;
 import model.domain.feedback.Feedback;
+import model.domain.feedback.FeedbackTypes;
 import model.domain.feedback.NormalScoreCalculator;
 import model.domain.feedback.Tips;
 import model.domain.questions.Question;
@@ -25,7 +26,7 @@ public class Quiz {
     public Quiz(){
         this.categoryDB = new CategoryTXT();
         this.questionDB = new QuestionTXT();
-        this.feedback = new Tips();
+        setFeedback(new NormalScoreCalculator());
     }
 
     public ArrayList<Category> saveCategory(Category category){
@@ -48,6 +49,14 @@ public class Quiz {
         return getCategoryDB().getSubCategories();
     }
 
+    public ArrayList<Feedback> getFeedbackTypes(){
+        ArrayList<Feedback> types = new ArrayList<>();
+        for (FeedbackTypes type: FeedbackTypes.values()){
+            types.add(type.getFeedback());
+        }
+        return types;
+    }
+
     public ArrayList<Category> readCategories() {
         return getCategoryDB().getCategories();
     }
@@ -64,7 +73,14 @@ public class Quiz {
         return getFeedback().writeFeedback(questions, getMainCategories(), getSubCategories());
     }
 
-    private Feedback getFeedback(){
+    public Feedback getFeedback(){
         return this.feedback;
+    }
+
+    public void setFeedback(Feedback feedback){
+        if (feedback == null){
+            throw new IllegalArgumentException("feedback cannot be a null value");
+        }
+        this.feedback = feedback;
     }
 }

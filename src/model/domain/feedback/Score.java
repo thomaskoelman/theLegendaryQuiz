@@ -14,4 +14,9 @@ public abstract class Score implements Feedback{
     protected ArrayList<Integer> getPoints(){
         return points;
     }
+
+    @Override
+    public String toString() {
+        return "Score";
+    }
 }
