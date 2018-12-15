@@ -10,6 +10,12 @@ public class Tips implements Feedback {
 
     @Override
     public String writeFeedback(ArrayList<Question> questions, ArrayList<MainCategory> mainCategories, ArrayList<SubCategory> subCategories) {
-        return null;
+        String feedback = "";
+        for (Question question: questions){
+            if (!question.getCheckedAnswer().equals(question.getRightAnswer())){
+                feedback += question.getFeedback() + "\n";
+            }
+        }
+        return feedback;
     }
 }

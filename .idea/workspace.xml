@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/categories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/questions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/handlers/StartQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/handlers/StartQuiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/handlers/SubmitAnswer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/handlers/SubmitAnswer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/db/CategoryDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/db/CategoryDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/db/CategoryTXT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/db/CategoryTXT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/domain/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/domain/categories/SubCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/categories/SubCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/domain/feedback/ChanceToLoseInstantlyAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/feedback/ChanceToLoseInstantlyAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/domain/feedback/DivideByTwoAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/feedback/DivideByTwoAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/domain/feedback/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/feedback/Feedback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/domain/feedback/NormalScoreCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/feedback/NormalScoreCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/domain/feedback/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/feedback/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/domain/feedback/ScoreAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/feedback/ScoreAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/domain/feedback/Tips.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/feedback/Tips.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/domain/questions/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/questions/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MessageShower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MessageShower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/QuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/QuestionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/QuestionShower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/QuestionShower.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -125,26 +106,26 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="40" />
-          <entry key="java" value="17641" />
+          <entry key="java" value="17708" />
           <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17641" />
+          <entry key="JAVA" value="17708" />
           <entry key="PLAIN_TEXT" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="java" value="158" />
+          <entry key="java" value="160" />
           <entry key="txt" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="158" />
+          <entry key="JAVA" value="160" />
           <entry key="PLAIN_TEXT" value="13" />
         </counts>
       </usages-collector>
@@ -155,7 +136,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-35">
@@ -168,10 +149,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/domain/questions/Question.java">
+        <entry file="file://$PROJECT_DIR$/src/model/domain/Quiz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="74" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="123">
+              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,26 +160,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/handlers/SubmitAnswer.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/domain/feedback/Tips.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/QuestionShower.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="81" column="22" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
+            <state relative-caret-position="238">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2923#2924#0" expanded="true" />
-                <element signature="e#2949#2950#0" expanded="true" />
-                <element signature="e#3055#3056#0" expanded="true" />
-                <element signature="e#3088#3089#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -275,14 +243,14 @@
         <option value="$PROJECT_DIR$/src/view/MessageShower.java" />
         <option value="$PROJECT_DIR$/src/model/db/CategoryDB.java" />
         <option value="$PROJECT_DIR$/src/model/db/CategoryTXT.java" />
-        <option value="$PROJECT_DIR$/src/model/domain/Quiz.java" />
         <option value="$PROJECT_DIR$/src/model/domain/feedback/Feedback.java" />
         <option value="$PROJECT_DIR$/src/model/domain/feedback/ChanceToLoseInstantlyAlgorithm.java" />
-        <option value="$PROJECT_DIR$/src/model/domain/feedback/Tips.java" />
         <option value="$PROJECT_DIR$/src/model/domain/feedback/DivideByTwoAlgorithm.java" />
         <option value="$PROJECT_DIR$/src/view/QuestionShower.java" />
         <option value="$PROJECT_DIR$/src/model/domain/feedback/NormalScoreCalculator.java" />
         <option value="$PROJECT_DIR$/src/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/model/domain/Quiz.java" />
+        <option value="$PROJECT_DIR$/src/model/domain/feedback/Tips.java" />
       </list>
     </option>
   </component>
@@ -559,12 +527,12 @@
       <workItem from="1544781995260" duration="121000" />
       <workItem from="1544782220475" duration="6031000" />
       <workItem from="1544799990181" duration="43000" />
-      <workItem from="1544810014875" duration="29227000" />
+      <workItem from="1544810014875" duration="29668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97627000" />
+    <option name="totallyTimeSpent" value="98068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -929,34 +897,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/domain/Quiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="62" column="84" lean-forward="true" selection-start-line="62" selection-start-column="84" selection-end-line="62" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1337#1338#0" expanded="true" />
-            <element signature="e#1666#1667#0" expanded="true" />
-            <element signature="e#1692#1693#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/domain/feedback/Feedback.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" column="132" selection-start-line="9" selection-start-column="132" selection-end-line="9" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/domain/feedback/Tips.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="139" selection-start-line="11" selection-start-column="139" selection-end-line="11" selection-end-column="139" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -990,23 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/domain/questions/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/handlers/SubmitAnswer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/QuestionShower.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1031,10 +958,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/domain/questions/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/handlers/SubmitAnswer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-35">
           <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/domain/Quiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/domain/feedback/Tips.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
