@@ -1,5 +1,6 @@
 package model.domain;
 
+import model.configurations.PropertyAccess;
 import model.db.CategoryDB;
 import model.db.CategoryTXT;
 import model.db.QuestionDB;
@@ -22,11 +23,13 @@ public class Quiz {
     private Feedback feedback;
     private CategoryDB categoryDB;
     private QuestionDB questionDB;
+    private PropertyAccess propertyAccess;
 
     public Quiz(){
         this.categoryDB = new CategoryTXT();
         this.questionDB = new QuestionTXT();
-        setFeedback(new NormalScoreCalculator());
+        this.propertyAccess = new PropertyAccess();
+        setFeedback(getPropertyAccess().getFeedback());
     }
 
     public ArrayList<Category> saveCategory(Category category){
@@ -81,6 +84,11 @@ public class Quiz {
         if (feedback == null){
             throw new IllegalArgumentException("feedback cannot be a null value");
         }
+        getPropertyAccess().writeFeedbackToProperties(feedback);
         this.feedback = feedback;
+    }
+
+    private PropertyAccess getPropertyAccess(){
+        return this.propertyAccess;
     }
 }
