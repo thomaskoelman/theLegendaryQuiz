@@ -32,7 +32,11 @@ public class NormalScoreCalculator extends Score {
                 points += question.getPoints();
             }
         }
-        return "These are your scores: " + points + "/" + total + "\n";
+        String feedback = "";
+        if (points == total){
+            feedback += "Awesome! You answered everything correctly.\n";
+        }
+        return feedback += "These are your scores: " + points + "/" + total + "\n";
     }
 
     //display points gained of your main category specified, results are incremented also by the main category's subcategories' results

@@ -10,8 +10,6 @@ import model.domain.categories.MainCategory;
 import model.domain.categories.SubCategory;
 import model.domain.feedback.Feedback;
 import model.domain.feedback.FeedbackTypes;
-import model.domain.feedback.NormalScoreCalculator;
-import model.domain.feedback.Tips;
 import model.domain.questions.Question;
 import model.domain.states.State;
 

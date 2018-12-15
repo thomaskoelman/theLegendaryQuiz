@@ -16,6 +16,9 @@ public class Tips implements Feedback {
                 feedback += question.getFeedback() + "\n";
             }
         }
+        if (feedback.trim().isEmpty()){
+            feedback += "Awesome! You answered everything correctly.";
+        }
         return feedback;
     }
 
