@@ -43,6 +43,17 @@ public class PropertyAccess {
         }
     }
 
+    public void writeMessageToProperties(String message){
+        Properties properties = readProperties();
+        properties.setProperty("lastResults", message);
+        try {
+            FileOutputStream outputStream = new FileOutputStream(getFile());
+            properties.store(outputStream, null);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     private Properties readProperties(){
         Properties properties = new Properties();
         try {
@@ -79,6 +90,11 @@ public class PropertyAccess {
     public String getState(){
         String state = getProperties().getProperty("state");
         return state;
+    }
+
+    public String getLastResults(){
+        String results = getProperties().getProperty("lastResults");
+        return results;
     }
 
     private Properties getProperties(){

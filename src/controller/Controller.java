@@ -204,6 +204,7 @@ public class Controller implements Subject {
 
     private void setMessage(String message) {
         this.message = message;
+        getQuiz().storeMessage(message);
         dataChanged();
     }
 

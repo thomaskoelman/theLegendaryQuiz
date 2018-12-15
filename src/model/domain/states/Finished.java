@@ -16,7 +16,7 @@ public class Finished implements State {
 
     @Override
     public String getMessage() {
-        return null;
+        return getQuiz().getLastResults();
     }
 
     @Override

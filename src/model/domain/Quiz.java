@@ -106,6 +106,14 @@ public class Quiz {
         this.feedback = feedback;
     }
 
+    public void storeMessage(String message){
+        getPropertyAccess().writeMessageToProperties(message);
+    }
+
+    public String getLastResults(){
+        return getPropertyAccess().getLastResults();
+    }
+
     public void setState(){
         String currentState = getPropertyAccess().getState();
         if (currentState.equals(getNeverStarted().toString())){
@@ -141,7 +149,7 @@ public class Quiz {
         return finished;
     }
 
-    private PropertyAccess getPropertyAccess(){
+    public PropertyAccess getPropertyAccess(){
         return this.propertyAccess;
     }
 
