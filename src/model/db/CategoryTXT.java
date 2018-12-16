@@ -38,7 +38,7 @@ public class CategoryTXT implements CategoryDB{
     @Override
     public ArrayList<Category> updateCategory(Category category, String id) {
         for (Category categoryFromList: getCategories()){
-            if (categoryFromList.equals(category)){
+            if (categoryFromList.getName().equals(id)){
                 int index = getCategories().indexOf(categoryFromList);
                 getCategories().set(index, category);
             }

@@ -3,198 +3,54 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="600.1408333333333" y="150.0">model.domain.feedback.Tips</node>
-    <node x="1329.0158333333334" y="0.0">model.domain.states.State</node>
-    <node x="689.1408333333333" y="150.0">model.domain.feedback.Score</node>
-    <node x="1332.25" y="150.0">model.domain.states.NeverStarted</node>
-    <node x="628.1633333333333" y="310.0">model.domain.feedback.DivideByTwoAlgorithm</node>
-    <node x="354.14083333333326" y="150.0">model.domain.questions.Multiplechoice</node>
-    <node x="143.0" y="150.0">model.db.DBexcel</node>
-    <node x="863.5175" y="150.0">model.domain.Quiz</node>
-    <node x="1045.2466666666667" y="230.0">controller.Controller</node>
-    <node x="1212.25" y="150.0">model.domain.states.Underway</node>
-    <node x="756.1633333333333" y="230.0">model.domain.feedback.ScoreAlgorithm</node>
-    <node x="0.0" y="150.0">model.domain.categories.MainCategory</node>
-    <node x="1060.2466666666667" y="310.0">application.App</node>
-    <node x="38.75" y="230.0">model.domain.categories.SubCategory</node>
-    <node x="78.99666666666656" y="0.0">model.domain.categories.Category</node>
-    <node x="1068.25" y="150.0">controller.handlers</node>
-    <node x="819.1633333333333" y="310.0">model.domain.feedback.ChanceToLoseInstantlyAlgorithm</node>
-    <node x="687.1633333333333" y="0.0">model.domain.feedback.Feedback</node>
-    <node x="217.18416666666667" y="0.0">model.domain.questions.Question</node>
-    <node x="565.1633333333333" y="230.0">model.domain.feedback.NormalScoreCalculator</node>
-    <node x="500.14083333333326" y="150.0">model.domain.questions.JaNee</node>
-    <node x="332.18416666666667" y="0.0">model.db.Database</node>
-    <node x="257.14083333333326" y="150.0">model.db.DBtxt</node>
-    <node x="1469.25" y="150.0">model.domain.states.Finished</node>
+    <node x="55.069444444444436" y="160.0">controller.Controller</node>
+    <node x="118.0" y="0.0">model.domain.states.State</node>
+    <node x="-187.7777777777778" y="316.6666666666667">model.domain.feedback.Feedback</node>
+    <node x="67.52777777777779" y="80.0">model.domain.Quiz</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="model.db.DBexcel" target="model.domain.questions.Question">
-      <point x="0.0" y="-15.0" />
-      <point x="188.5" y="110.0" />
-      <point x="229.05916666666667" y="110.0" />
-      <point x="-35.625" y="15.0" />
-    </edge>
-    <edge source="model.domain.states.NeverStarted" target="model.domain.states.State">
-      <point x="0.0" y="-15.0" />
-      <point x="1390.75" y="130.0" />
-      <point x="1375.8908333333334" y="130.0" />
-      <point x="9.375" y="15.0" />
-    </edge>
-    <edge source="controller.Controller" target="controller.handlers">
-      <point x="33.33333333333334" y="-15.0" />
-      <point x="1128.58" y="205.0" />
-      <point x="1161.25" y="205.0" />
-      <point x="31.0" y="15.0" />
-    </edge>
-    <edge source="model.domain.categories.SubCategory" target="model.domain.categories.Category">
-      <point x="29.0" y="-15.0" />
-      <point x="125.75" y="205.0" />
-      <point x="132.5" y="205.0" />
-      <point x="132.5" y="130.0" />
-      <point x="114.99666666666656" y="130.0" />
-      <point x="-12.0" y="15.0" />
-    </edge>
-    <edge source="model.db.DBtxt" target="model.db.Database">
-      <point x="25.666666666666742" y="-15.0" />
-      <point x="321.3075" y="130.0" />
-      <point x="381.18416666666667" y="130.0" />
-      <point x="0.0" y="15.0" />
-    </edge>
-    <edge source="model.domain.states.Underway" target="model.domain.states.State">
-      <point x="0.0" y="-15.0" />
-      <point x="1262.25" y="130.0" />
-      <point x="1357.1408333333334" y="130.0" />
-      <point x="-9.375" y="15.0" />
-    </edge>
-    <edge source="model.db.DBtxt" target="model.domain.questions.Question">
-      <point x="0.0" y="-15.0" />
-      <point x="295.64083333333326" y="90.0" />
-      <point x="252.80916666666667" y="90.0" />
-      <point x="-11.875" y="15.0" />
-    </edge>
-    <edge source="model.domain.feedback.ChanceToLoseInstantlyAlgorithm" target="model.domain.feedback.ScoreAlgorithm">
-      <point x="0.0" y="-15.0" />
-      <point x="929.6633333333333" y="285.0" />
-      <point x="854.4133333333333" y="285.0" />
-      <point x="32.75" y="15.0" />
-    </edge>
-    <edge source="model.domain.feedback.Tips" target="model.domain.feedback.Feedback">
-      <point x="0.0" y="-15.0" />
-      <point x="634.6408333333333" y="130.0" />
-      <point x="703.4966666666667" y="130.0" />
-      <point x="-32.66666666666663" y="15.0" />
-    </edge>
-    <edge source="model.domain.questions.JaNee" target="model.domain.questions.Question">
-      <point x="0.0" y="-15.0" />
-      <point x="540.1408333333333" y="70.0" />
-      <point x="300.30916666666667" y="70.0" />
-      <point x="35.625" y="15.0" />
-    </edge>
-    <edge source="model.domain.feedback.ScoreAlgorithm" target="model.domain.feedback.Score">
-      <point x="0.0" y="-15.0" />
-      <point x="821.6633333333333" y="205.0" />
-      <point x="746.8908333333333" y="205.0" />
-      <point x="19.25" y="15.0" />
-    </edge>
-    <edge source="model.db.DBexcel" target="model.domain.categories.Category">
-      <point x="-30.33333333333337" y="-15.0" />
-      <point x="158.16666666666663" y="130.0" />
-      <point x="138.99666666666656" y="130.0" />
-      <point x="12.0" y="15.0" />
-    </edge>
-    <edge source="model.domain.categories.MainCategory" target="model.domain.categories.Category">
-      <point x="0.0" y="-15.0" />
-      <point x="61.0" y="130.0" />
-      <point x="90.99666666666656" y="130.0" />
-      <point x="-36.0" y="15.0" />
-    </edge>
-    <edge source="model.db.DBexcel" target="model.db.Database">
-      <point x="30.33333333333337" y="-15.0" />
-      <point x="218.83333333333337" y="120.0" />
-      <point x="348.51750000000004" y="120.0" />
-      <point x="-32.66666666666663" y="15.0" />
-    </edge>
-    <edge source="model.domain.feedback.Score" target="model.domain.feedback.Feedback">
-      <point x="0.0" y="-15.0" />
-      <point x="727.6408333333333" y="130.0" />
-      <point x="736.1633333333333" y="130.0" />
-      <point x="0.0" y="15.0" />
+    <edge source="controller.Controller" target="model.domain.states.State">
+      <point x="40.000000000000014" y="-15.0" />
+      <point x="145.06944444444446" y="135.0" />
+      <point x="161.95833333333334" y="135.0" />
+      <point x="161.95833333333334" y="60.0" />
+      <point x="180.5" y="60.0" />
+      <point x="25.0" y="15.0" />
     </edge>
     <edge source="controller.Controller" target="model.domain.Quiz">
-      <point x="-33.33333333333334" y="-15.0" />
-      <point x="1061.9133333333334" y="205.0" />
-      <point x="899.5175" y="205.0" />
+      <point x="1.4210854715202004E-14" y="-15.0" />
+      <point x="105.06944444444446" y="135.0" />
+      <point x="103.52777777777779" y="135.0" />
       <point x="0.0" y="15.0" />
     </edge>
-    <edge source="model.domain.categories.SubCategory" target="model.domain.categories.MainCategory">
-      <point x="-29.0" y="-15.0" />
-      <point x="67.75" y="205.0" />
-      <point x="61.0" y="205.0" />
-      <point x="0.0" y="15.0" />
-    </edge>
-    <edge source="model.domain.states.Finished" target="model.domain.states.State">
-      <point x="0.0" y="-15.0" />
-      <point x="1514.75" y="120.0" />
-      <point x="1394.6408333333334" y="120.0" />
-      <point x="28.125" y="15.0" />
-    </edge>
-    <edge source="model.domain.questions.Multiplechoice" target="model.domain.questions.Question">
-      <point x="0.0" y="-15.0" />
-      <point x="417.14083333333326" y="80.0" />
-      <point x="276.55916666666667" y="80.0" />
-      <point x="11.875" y="15.0" />
-    </edge>
-    <edge source="application.App" target="controller.Controller">
-      <point x="-17.5" y="-15.0" />
-      <point x="1077.7466666666667" y="285.0" />
-      <point x="1070.2466666666667" y="285.0" />
-      <point x="-25.0" y="15.0" />
-    </edge>
-    <edge source="model.domain.feedback.NormalScoreCalculator" target="model.domain.feedback.Score">
-      <point x="0.0" y="-15.0" />
-      <point x="650.6633333333333" y="205.0" />
-      <point x="708.3908333333333" y="205.0" />
-      <point x="-19.25" y="15.0" />
+    <edge source="controller.Controller" target="model.domain.feedback.Feedback">
+      <point x="-39.999999999999986" y="-15.0" />
+      <point x="65.06944444444446" y="135.0" />
+      <point x="47.652777777777786" y="135.0" />
+      <point x="47.652777777777786" y="60.0" />
+      <point x="16.33333333333333" y="60.0" />
+      <point x="-32.66666666666667" y="15.0" />
     </edge>
     <edge source="model.domain.Quiz" target="model.domain.feedback.Feedback">
-      <point x="0.0" y="-15.0" />
-      <point x="899.5175" y="50.0" />
-      <point x="768.8299999999999" y="50.0" />
-      <point x="32.66666666666663" y="15.0" />
-    </edge>
-    <edge source="model.db.DBtxt" target="model.domain.categories.Category">
-      <point x="-25.666666666666742" y="-15.0" />
-      <point x="269.9741666666665" y="100.0" />
-      <point x="162.99666666666656" y="100.0" />
-      <point x="36.0" y="15.0" />
-    </edge>
-    <edge source="model.domain.Quiz" target="model.db.Database">
-      <point x="-24.0" y="-15.0" />
-      <point x="875.5175" y="60.0" />
-      <point x="413.8508333333333" y="60.0" />
-      <point x="32.66666666666663" y="15.0" />
+      <point x="-27.0" y="-15.0" />
+      <point x="76.52777777777779" y="50.0" />
+      <point x="48.99999999999999" y="50.0" />
+      <point x="-7.105427357601002E-15" y="15.0" />
     </edge>
     <edge source="model.domain.Quiz" target="model.domain.states.State">
-      <point x="24.0" y="-15.0" />
-      <point x="923.5175" y="120.0" />
-      <point x="1338.3908333333334" y="120.0" />
-      <point x="-28.125" y="15.0" />
-    </edge>
-    <edge source="model.domain.feedback.DivideByTwoAlgorithm" target="model.domain.feedback.ScoreAlgorithm">
-      <point x="0.0" y="-15.0" />
-      <point x="713.6633333333333" y="285.0" />
-      <point x="788.9133333333333" y="285.0" />
-      <point x="-32.75" y="15.0" />
+      <point x="27.0" y="-15.0" />
+      <point x="130.52777777777777" y="60.0" />
+      <point x="155.5" y="60.0" />
+      <point x="0.0" y="15.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.7425679949399114" x="780.5" y="170.0" />
+  <settings layout="Hierarchic Group" zoom="0.8999999999999999" x="236.875" y="163.33333333333334" />
   <SelectedNodes>
-    <node>model.db.DBtxt</node>
+    <node>model.domain.feedback.Feedback</node>
   </SelectedNodes>
   <Categories />
   <SCOPE>All</SCOPE>
-  <VISIBILITY>private</VISIBILITY>
+  <VISIBILITY>public</VISIBILITY>
 </Diagram>
 

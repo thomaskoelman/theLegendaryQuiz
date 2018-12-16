@@ -24,11 +24,15 @@ import model.domain.questions.Question;
 import java.util.ArrayList;
 
 public class CategoryCreator extends GridPane implements Observer {
+    private Controller controller;
+    private Stage stage;
     private Button confirmButton, cancelButton;
     private TextField nameField, descriptionField;
     private ComboBox<MainCategory> categoryField;
 
     public CategoryCreator(Controller controller, Stage stage, Event event){
+        this.controller = controller;
+        this.stage = stage;
         controller.registerObserver(this);
 
         //create objects that will be part of the window
@@ -39,11 +43,7 @@ public class CategoryCreator extends GridPane implements Observer {
         this.descriptionField = new TextField();
         this.categoryField = new ComboBox<>();
         this.categoryField.setItems(controller.getMainCategories());
-        if (event instanceof ActionEvent){
-            this.confirmButton = new Button("Add to list");
-        } else if (event instanceof MouseEvent){
-            this.confirmButton = new Button("Update category");
-        }
+        this.confirmButton = new Button("Add to list");
         this.cancelButton = new Button("Cancel");
 
         //adds objects to the window
@@ -57,12 +57,7 @@ public class CategoryCreator extends GridPane implements Observer {
         add(this.confirmButton, 1, 3, 1, 1);
 
         //define what the buttons do
-        if (event instanceof ActionEvent){
-            this.confirmButton.setOnAction(new SaveCategory(controller, this.nameField, this.descriptionField, this.categoryField, stage));
-        } else if (event instanceof MouseEvent){
-            String categoryID = this.nameField.getText();
-            this.confirmButton.setOnAction(new UpdateCategory(controller, this.nameField, this.descriptionField, this.categoryField, stage, categoryID));
-        }
+        this.confirmButton.setOnAction(new SaveCategory(controller, this.nameField, this.descriptionField, this.categoryField, stage));
         this.cancelButton.setOnAction(new CloseWindow(stage));
 
         //layout
@@ -79,12 +74,17 @@ public class CategoryCreator extends GridPane implements Observer {
     private void fillInFields(Category category){
         try{
             this.nameField.setText(category.getName());
+            String categoryID = this.nameField.getText();
             this.descriptionField.setText(category.getDescription());
             if (category instanceof SubCategory){
                 this.categoryField.getSelectionModel().select(((SubCategory) category).getMainCategory());
             } else {
                 this.categoryField.getSelectionModel().select(null);
             }
+            this.confirmButton = new Button("Update category");
+            add(this.confirmButton, 1,3,1,1);
+            this.confirmButton.setOnAction(new UpdateCategory(getController(), this.nameField, this.descriptionField, this.categoryField, getStage(), categoryID));
+
         } catch (NullPointerException e){
             //ignore nullpointer exceptions here, they don't harm the program
         }
@@ -94,5 +94,13 @@ public class CategoryCreator extends GridPane implements Observer {
     @Override
     public void update(String message, String question, ArrayList<String> answers, ObservableList<Category> categories, ObservableList<Question> questions, Category category, Question selectedQuestion) {
         fillInFields(category);
+    }
+
+    private Controller getController() {
+        return controller;
+    }
+
+    private Stage getStage() {
+        return stage;
     }
 }

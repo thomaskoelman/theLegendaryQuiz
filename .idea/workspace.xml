@@ -2,25 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/handlers/RemoveQuestion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheLegendaryQuiz.uml" beforeDir="false" afterPath="$PROJECT_DIR$/TheLegendaryQuiz.uml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/categories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/questions.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/quiz.properties" beforeDir="false" afterPath="$PROJECT_DIR$/files/quiz.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/categories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/domain/Quiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/model/domain/Quiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/view/QuestionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/view/QuestionManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/configurations/PropertyAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/configurations/PropertyAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/db/CategoryDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/db/CategoryDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/view/CategoryCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TheLegendaryQuiz/view/CategoryCreator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/db/CategoryTXT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/db/CategoryTXT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/db/QuestionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/db/QuestionDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/db/QuestionTXT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/db/QuestionTXT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/domain/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/domain/questions/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/questions/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/CategoryCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CategoryCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/QuestionCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/QuestionCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/QuestionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/QuestionManager.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -151,62 +142,107 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-646139663">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="3" />
+          <entry key="properties" value="1" />
+          <entry key="txt" value="2" />
+          <entry key="uml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="3" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Properties" value="1" />
+          <entry key="UML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="132" />
+          <entry key="properties" value="1" />
+          <entry key="txt" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="132" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Properties" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="142" column="85" selection-start-line="142" selection-start-column="85" selection-end-line="142" selection-end-column="85" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/model/domain/Quiz.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/db/CategoryTXT.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/db/QuestionTXT.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/configurations/PropertyAccess.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/TheLegendaryQuiz.uml">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement />
+              <nodes>
+                <node x="55.06944444444446" y="160.0">controller.Controller</node>
+                <node x="118.0" y="0.0">model.domain.states.State</node>
+                <node x="0.0" y="0.0">model.domain.feedback.Feedback</node>
+                <node x="67.52777777777779" y="80.0">model.domain.Quiz</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="controller.Controller" target="model.domain.states.State">
+                  <point x="40.0" y="-15.0" />
+                  <point x="145.06944444444446" y="135.0" />
+                  <point x="161.95833333333334" y="135.0" />
+                  <point x="161.95833333333334" y="60.0" />
+                  <point x="180.5" y="60.0" />
+                  <point x="25.0" y="15.0" />
+                </edge>
+                <edge source="controller.Controller" target="model.domain.Quiz">
+                  <point x="0.0" y="-15.0" />
+                  <point x="105.06944444444446" y="135.0" />
+                  <point x="103.52777777777779" y="135.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="controller.Controller" target="model.domain.feedback.Feedback">
+                  <point x="-40.0" y="-15.0" />
+                  <point x="65.06944444444446" y="135.0" />
+                  <point x="47.652777777777786" y="135.0" />
+                  <point x="47.652777777777786" y="60.0" />
+                  <point x="16.33333333333333" y="60.0" />
+                  <point x="-32.66666666666667" y="15.0" />
+                </edge>
+                <edge source="model.domain.Quiz" target="model.domain.feedback.Feedback">
+                  <point x="-27.000000000000014" y="-15.0" />
+                  <point x="76.52777777777777" y="50.0" />
+                  <point x="48.99999999999999" y="50.0" />
+                  <point x="-7.105427357601002E-15" y="15.0" />
+                </edge>
+                <edge source="model.domain.Quiz" target="model.domain.states.State">
+                  <point x="26.999999999999986" y="-15.0" />
+                  <point x="130.52777777777777" y="60.0" />
+                  <point x="155.5" y="60.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.8999999999999999" x="236.875" y="297.2222222222223" />
+              <SelectedNodes>
+                <node>model.domain.feedback.Feedback</node>
+              </SelectedNodes>
+              <Categories />
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>public</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -231,6 +267,7 @@
       <find>setQuestions</find>
       <find>Questions</find>
       <find>Question</find>
+      <find>update</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -284,17 +321,17 @@
         <option value="$PROJECT_DIR$/src/model/domain/questions/Question.java" />
         <option value="$PROJECT_DIR$/src/controller/handlers/SaveQuestion.java" />
         <option value="$PROJECT_DIR$/src/view/QuestionCreator.java" />
-        <option value="$PROJECT_DIR$/src/view/CategoryCreator.java" />
         <option value="$PROJECT_DIR$/src/model/db/CategoryDB.java" />
-        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/model/db/QuestionDB.java" />
-        <option value="$PROJECT_DIR$/src/model/db/CategoryTXT.java" />
         <option value="$PROJECT_DIR$/src/model/db/QuestionTXT.java" />
         <option value="$PROJECT_DIR$/src/model/configurations/PropertyAccess.java" />
         <option value="$PROJECT_DIR$/src/model/domain/Quiz.java" />
+        <option value="$PROJECT_DIR$/src/view/CategoryCreator.java" />
+        <option value="$PROJECT_DIR$/src/model/db/CategoryTXT.java" />
         <option value="$PROJECT_DIR$/files/categories.txt" />
         <option value="$PROJECT_DIR$/files/questions.txt" />
         <option value="$PROJECT_DIR$/files/quiz.properties" />
+        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
       </list>
     </option>
   </component>
@@ -320,6 +357,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -360,13 +399,6 @@
               <item name="theLegendaryQuiz" type="b2602c69:ProjectViewProjectNode" />
               <item name="theLegendaryQuiz" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="observerPattern" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="theLegendaryQuiz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theLegendaryQuiz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -396,7 +428,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="feedback" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="theLegendaryQuiz" type="b2602c69:ProjectViewProjectNode" />
@@ -404,7 +436,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="questions" type="462c0819:PsiDirectoryNode" />
+              <item name="factories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="theLegendaryQuiz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theLegendaryQuiz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="feedback" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="theLegendaryQuiz" type="b2602c69:ProjectViewProjectNode" />
@@ -424,8 +464,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -447,12 +485,12 @@
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\thoma\Documents\UCLL\Toegepaste_informatica\Fase 2\OOO\theLegendaryQuiz\theLegendaryQuiz\files" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="model" />
       <recent name="view" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\thoma\Documents\UCLL\Toegepaste_informatica\Fase 2\OOO\theLegendaryQuiz\theLegendaryQuiz\files" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -582,17 +620,18 @@
       <workItem from="1544799990181" duration="43000" />
       <workItem from="1544810014875" duration="51854000" />
       <workItem from="1544955590488" duration="22865000" />
+      <workItem from="1544981403859" duration="4160000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143119000" />
+    <option name="totallyTimeSpent" value="147279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.23758389" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2409396" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -602,7 +641,7 @@
       <window_info id="simpleUML" order="7" weight="0.3295302" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34135976" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -648,6 +687,84 @@
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/Controller.java</url>
+          <line>140</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/handlers/UpdateCategory.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/handlers/UpdateCategory.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/handlers/UpdateCategory.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/handlers/UpdateCategory.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/controller/Controller.java</url>
+          <line>141</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/domain/Quiz.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/db/CategoryTXT.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/db/CategoryTXT.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/db/CategoryTXT.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/db/CategoryTXT.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/db/CategoryTXT.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/db/CategoryTXT.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -656,20 +773,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/domain/questions/JaNee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/domain/questions/Multiplechoice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/domain/factories/QuestionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1011,43 +1114,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/handlers/UpdateCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="79" selection-start-line="31" selection-start-column="79" selection-end-line="31" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/CategoryCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="88" column="77" selection-start-line="88" selection-start-column="77" selection-end-line="88" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="142" column="85" selection-start-line="142" selection-start-column="85" selection-end-line="142" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/db/CategoryTXT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/db/QuestionTXT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1057,7 +1123,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/configurations/PropertyAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="272">
           <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1065,19 +1131,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/files/quiz.properties">
+    <entry file="file://$PROJECT_DIR$/src/view/CategoryCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="84" column="43" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4264#4265#0" expanded="true" />
+            <element signature="e#4297#4298#0" expanded="true" />
+            <element signature="e#4387#4388#0" expanded="true" />
+            <element signature="e#4415#4416#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/categories.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/files/questions.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/files/categories.txt">
+    <entry file="file://$PROJECT_DIR$/files/quiz.properties">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/handlers/UpdateCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/domain/Quiz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
+        <state relative-caret-position="158">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/db/CategoryTXT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="142" column="87" lean-forward="true" selection-start-line="142" selection-start-column="87" selection-end-line="142" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TheLegendaryQuiz.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="55.06944444444446" y="160.0">controller.Controller</node>
+            <node x="118.0" y="0.0">model.domain.states.State</node>
+            <node x="0.0" y="0.0">model.domain.feedback.Feedback</node>
+            <node x="67.52777777777779" y="80.0">model.domain.Quiz</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="controller.Controller" target="model.domain.states.State">
+              <point x="40.0" y="-15.0" />
+              <point x="145.06944444444446" y="135.0" />
+              <point x="161.95833333333334" y="135.0" />
+              <point x="161.95833333333334" y="60.0" />
+              <point x="180.5" y="60.0" />
+              <point x="25.0" y="15.0" />
+            </edge>
+            <edge source="controller.Controller" target="model.domain.Quiz">
+              <point x="0.0" y="-15.0" />
+              <point x="105.06944444444446" y="135.0" />
+              <point x="103.52777777777779" y="135.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="controller.Controller" target="model.domain.feedback.Feedback">
+              <point x="-40.0" y="-15.0" />
+              <point x="65.06944444444446" y="135.0" />
+              <point x="47.652777777777786" y="135.0" />
+              <point x="47.652777777777786" y="60.0" />
+              <point x="16.33333333333333" y="60.0" />
+              <point x="-32.66666666666667" y="15.0" />
+            </edge>
+            <edge source="model.domain.Quiz" target="model.domain.feedback.Feedback">
+              <point x="-27.000000000000014" y="-15.0" />
+              <point x="76.52777777777777" y="50.0" />
+              <point x="48.99999999999999" y="50.0" />
+              <point x="-7.105427357601002E-15" y="15.0" />
+            </edge>
+            <edge source="model.domain.Quiz" target="model.domain.states.State">
+              <point x="26.999999999999986" y="-15.0" />
+              <point x="130.52777777777777" y="60.0" />
+              <point x="155.5" y="60.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8999999999999999" x="236.875" y="297.2222222222223" />
+          <SelectedNodes>
+            <node>model.domain.feedback.Feedback</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
         </state>
       </provider>
     </entry>
