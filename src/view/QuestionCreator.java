@@ -4,23 +4,37 @@ package view;
 import controller.Controller;
 import controller.handlers.CloseWindow;
 import controller.handlers.SaveQuestion;
+import controller.handlers.UpdateQuestion;
+import controller.observerPattern.Observer;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import model.domain.categories.Category;
+import model.domain.questions.Question;
 
-public class QuestionCreator extends GridPane {
+import java.util.ArrayList;
+
+public class QuestionCreator extends GridPane implements Observer {
     private Button addQuestionButton, cancelButton, addStatementButton, removeStatementButton;
     private TextArea statementsArea;
     private TextField questionField, statementField, feedbackField, puntenField;
     private ComboBox<Category> categoryField;
+    private Stage stage;
+    private Controller controller;
 
     public QuestionCreator(Controller controller, Stage stage){
+        this.stage = stage;
+        this.controller = controller;
+        //register to subject to receive data about selected question
+        controller.registerObserver(this);
 
         //create objects that will be part of the window
         Label question = new Label("Question:");
@@ -72,16 +86,45 @@ public class QuestionCreator extends GridPane {
 
         //layout
         this.setPrefHeight(350);
-        this.setPrefWidth(370);
+        this.setPrefWidth(700);
         this.setPadding(new Insets(5, 5, 5, 5));
         this.setVgap(5);
         this.setHgap(5);
     }
 
+    private void fillInFields(Question question){
+        this.questionField.setText(question.getQuestion());
+        String questionID = this.questionField.getText();
+        String answers = "";
+        for (String answer: question.getAnswers()){
+            answers += answer + "\n";
+        }
+        this.statementsArea.setText(answers);
+        this.categoryField.getSelectionModel().select(question.getCategory());
+        this.feedbackField.setText(question.getFeedback());
+        String points = "" + question.getPoints();
+        this.puntenField.setText(points);
+        this.addQuestionButton = new Button("Update");
+        this.addQuestionButton.setOnAction(new UpdateQuestion(getStage(), getController(),this.questionField, this.statementsArea, this.categoryField, this.puntenField, this.feedbackField, questionID));
+        add(this.addQuestionButton,1,12,2,1);
+    }
 
-   /* unlike the other handlers, following handlers are part of view. They are no part of the controller
-    because they contain no logic to be flushed to the model. Scope and context remain limited to current questioncreator
-   */
+    @Override
+    public void update(String message, String question, ArrayList<String> answers, ObservableList<Category> categories, ObservableList<Question> questions, Category category, Question selectedQuestion) {
+        fillInFields(selectedQuestion);
+    }
+
+    private Controller getController() {
+        return controller;
+    }
+
+    private Stage getStage() {
+        return stage;
+    }
+
+    /* unlike the other handlers, following handlers are part of view. They are no part of the controller
+             because they contain no logic to be flushed to the model. Scope and context remain limited to current questioncreator
+            */
     private class AddStatementToArea implements EventHandler<ActionEvent> {
         @Override
         public void handle(ActionEvent event) {
@@ -107,5 +150,6 @@ public class QuestionCreator extends GridPane {
             }
             statementsArea.replaceText(0, statements.length(), replacement);
         }
+
     }
 }

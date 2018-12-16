@@ -11,4 +11,6 @@ public interface QuestionDB {
     ArrayList<Question> getQuestions();
 
     ArrayList<Question> addQuestion(Question question);
+
+    ArrayList<Question> updateQuestion(Question question, String id);
 }

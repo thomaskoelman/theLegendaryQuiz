@@ -32,13 +32,20 @@ public class QuestionTXT implements QuestionDB{
         }
     }
 
-
-    //getters
-
-    public ArrayList<Question> getQuestions(){
-        return this.questions;
+    //find the first corresponding question and overwrite it
+    @Override
+    public ArrayList<Question> updateQuestion(Question question, String id) {
+        for (Question question1: getQuestions()){
+            if (question1.getQuestion().equals(id)){
+                int index = getQuestions().indexOf(question1);
+                getQuestions().set(index, question);
+            }
+        }
+        saveQuestions();
+        return getQuestions();
     }
 
+    //adds question to arraylist
     @Override
     public ArrayList<Question> addQuestion(Question question) {
         if (question == null){
@@ -49,6 +56,8 @@ public class QuestionTXT implements QuestionDB{
         return getQuestions();
     }
 
+
+    //writes existing list of questions away to txt file
     private void saveQuestions(){
         try {
             FileOutputStream fos = new FileOutputStream(getFile());
@@ -59,6 +68,14 @@ public class QuestionTXT implements QuestionDB{
             e.printStackTrace();
         }
     }
+
+    //getters
+
+    public ArrayList<Question> getQuestions(){
+        return this.questions;
+    }
+
+
 
     private File getFile(){
         return this.file;

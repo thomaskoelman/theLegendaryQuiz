@@ -7,5 +7,5 @@ import model.domain.questions.Question;
 import java.util.ArrayList;
 
 public interface Observer {
-    void update(String message, String question, ArrayList<String> answers, ObservableList<Category> categories, ObservableList<Question> questions);
+    void update(String message, String question, ArrayList<String> answers, ObservableList<Category> categories, ObservableList<Question> questions, Category category, Question selectedQuestion);
 }

@@ -60,7 +60,7 @@ public class MessageShower extends GridPane implements Observer {
 
     //methods of the observer pattern
     @Override
-    public void update(String message, String question, ArrayList<String> answers, ObservableList<Category> categories, ObservableList<Question> questions) {
+    public void update(String message, String question, ArrayList<String> answers, ObservableList<Category> categories, ObservableList<Question> questions, Category category, Question selectedQuestion) {
         setMessage(message);
     }
 

@@ -21,8 +21,6 @@ public class OpenNewQuestionCreator implements EventHandler<ActionEvent> {
         QuestionCreator questionCreator = new QuestionCreator(getController(), stage);
         Scene scene = new Scene(questionCreator);
         stage.setScene(scene);
-        stage.setWidth(700);
-        stage.setHeight(450);
         stage.show();
     }
 

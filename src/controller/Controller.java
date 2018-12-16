@@ -34,6 +34,8 @@ public class Controller implements Subject {
     private Iterator<Question> questionIterator;
     private Question currentQuestion;
     private ArrayList<Question> answersRemembered;
+    private Category selectedCategory;
+    private Question selectedQuestion;
 
     public Controller(){
         this.observers = new ArrayList<>();
@@ -132,6 +134,16 @@ public class Controller implements Subject {
         return getQuiz().getFeedback();
     }
 
+    //controller receives data from view and must overwrite a category in the database
+    public void updateCategory(String name, String description, MainCategory mainCategory, String id){
+        Category category = CategoryFactory.createCategory(name, description, mainCategory);
+    }
+
+    public void updateQuestion(String question, ArrayList<String> answers, Category category, String feedback, int points, String id) {
+        Question question1 = QuestionFactory.createQuestion(question, answers, category, feedback, points);
+        ArrayList<Question> updatedQuestions = getQuiz().updateQuestion(question1, id);
+        setQuestions(FXCollections.observableArrayList(updatedQuestions));
+    }
     //controller receives data from view and must create a category to add to the database
     public void saveCategory(String name, String description, MainCategory mainCategory){
         Category category = CategoryFactory.createCategory(name, description, mainCategory);
@@ -176,7 +188,7 @@ public class Controller implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer: getObservers()){
-            observer.update(getMessage(), getQuestion(), getAnswers(), getCategories(), getQuestions());
+            observer.update(getMessage(), getQuestion(), getAnswers(), getCategories(), getQuestions(), getSelectedCategory(), getSelectedQuestion());
         }
     }
 
@@ -256,5 +268,24 @@ public class Controller implements Subject {
     private ArrayList<Question> getAnswersRemembered(){
         return this.answersRemembered;
     }
+
+    public void setSelectedCategory(Category category){
+        this.selectedCategory = category;
+        dataChanged();
+    }
+
+    private Category getSelectedCategory(){
+        return this.selectedCategory;
+    }
+
+    public void setSelectedQuestion(Question question){
+        this.selectedQuestion = question;
+        dataChanged();
+    }
+
+    private Question getSelectedQuestion() {
+        return selectedQuestion;
+    }
+
 
 }

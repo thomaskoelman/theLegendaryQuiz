@@ -6,7 +6,6 @@ import model.domain.categories.SubCategory;
 import model.domain.questions.Question;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class NormalScoreCalculator extends Score {
 

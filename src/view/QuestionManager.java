@@ -2,6 +2,7 @@ package view;
 
 import controller.Controller;
 import controller.handlers.ChangeFeedbackType;
+import controller.handlers.ChangeQuestion;
 import controller.handlers.OpenNewQuestionCreator;
 import controller.observerPattern.Observer;
 import javafx.collections.ObservableList;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 public class QuestionManager extends GridPane implements Observer {
     private Controller controller;
     private TableView<Question> table;
-    private Button addQuestionButton;
+    private Button addQuestionButton, removeQuestionButton;
     private ComboBox<Feedback> feedbackComboBox;
     private Label feedbackTypeLabel;
 
@@ -41,6 +42,7 @@ public class QuestionManager extends GridPane implements Observer {
         this.table.setItems(controller.getQuestions());
         //button
         this.addQuestionButton = new Button("Add question");
+        this.removeQuestionButton = new Button("Remove question");
         //combobox and label
         this.feedbackTypeLabel = new Label("Type of feedback: ");
         this.feedbackComboBox = new ComboBox<>();
@@ -48,14 +50,16 @@ public class QuestionManager extends GridPane implements Observer {
         this.feedbackComboBox.getSelectionModel().select(controller.getFeedbackType());
 
         //add objects to window
-        add(this.table, 0, 1, 3, 6);
+        add(this.table, 0, 1, 4, 6);
         add(this.addQuestionButton, 0, 11, 1, 1);
         add(this.feedbackTypeLabel, 1, 11, 1,1);
         add(this.feedbackComboBox, 2, 11, 1, 1);
+        add(this.removeQuestionButton, 3, 11, 1,1);
 
         //add workings of the buttons
         this.addQuestionButton.setOnAction(new OpenNewQuestionCreator(controller));
         this.feedbackComboBox.setOnAction(new ChangeFeedbackType(this.feedbackComboBox, controller));
+        this.table.setOnMouseClicked(new ChangeQuestion(this.table, controller));
 
         //layout
         this.setPadding(new Insets(5, 5, 5, 5));
@@ -67,7 +71,7 @@ public class QuestionManager extends GridPane implements Observer {
     }
 
     @Override
-    public void update(String message, String question, ArrayList<String> answers, ObservableList<Category> categories, ObservableList<Question> questions) {
+    public void update(String message, String question, ArrayList<String> answers, ObservableList<Category> categories, ObservableList<Question> questions, Category category, Question selectedQuestion) {
         this.table.setItems(questions);
     }
 }

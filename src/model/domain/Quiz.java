@@ -90,6 +90,10 @@ public class Quiz {
         return getQuestionDB().addQuestion(question);
     }
 
+    public ArrayList<Question> updateQuestion(Question question, String id) {
+        return getQuestionDB().updateQuestion(question, id);
+    }
+
     public String writeFeedback(ArrayList<Question> questions){
         return getFeedback().writeFeedback(questions, getMainCategories(), getSubCategories());
     }
@@ -114,7 +118,7 @@ public class Quiz {
         return getPropertyAccess().getLastResults();
     }
 
-    public void setState(){
+    private void setState(){
         String currentState = getPropertyAccess().getState();
         if (currentState.equals(getNeverStarted().toString())){
             setState(getNeverStarted());
@@ -137,7 +141,7 @@ public class Quiz {
         return this.state;
     }
 
-    public State getNeverStarted() {
+    private State getNeverStarted() {
         return neverStarted;
     }
 
@@ -149,11 +153,13 @@ public class Quiz {
         return finished;
     }
 
-    public PropertyAccess getPropertyAccess(){
+    private PropertyAccess getPropertyAccess(){
         return this.propertyAccess;
     }
 
     public void quizEnds(State state) {
         getState().quizEnds(state);
     }
+
+
 }

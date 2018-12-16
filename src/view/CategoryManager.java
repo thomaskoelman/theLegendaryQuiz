@@ -2,6 +2,7 @@ package view;
 
 
 import controller.Controller;
+import controller.handlers.ChangeCategory;
 import controller.handlers.OpenNewCategoryCreator;
 import controller.observerPattern.Observer;
 import javafx.collections.ObservableList;
@@ -17,13 +18,11 @@ import model.domain.questions.Question;
 import java.util.ArrayList;
 
 public class CategoryManager extends GridPane implements Observer {
-    private Controller controller;
     private TableView<Category> table;
     private Button addCategoryButton;
 
     public CategoryManager(Controller controller){
         //register to subject
-        this.controller = controller;
         controller.registerObserver(this);
 
         //create all the objects that will be part of the manager
@@ -45,6 +44,7 @@ public class CategoryManager extends GridPane implements Observer {
 
         //define actions of buttons
         this.addCategoryButton.setOnAction(new OpenNewCategoryCreator(controller));
+        this.table.setOnMouseClicked(new ChangeCategory(this.table, controller));
 
         //layout
         this.setPadding(new Insets(5, 5, 5, 5));
@@ -58,7 +58,7 @@ public class CategoryManager extends GridPane implements Observer {
 
     //methods of the observer pattern
     @Override
-    public void update(String message, String question, ArrayList<String> answers, ObservableList<Category> categories, ObservableList<Question> questions) {
+    public void update(String message, String question, ArrayList<String> answers, ObservableList<Category> categories, ObservableList<Question> questions, Category category, Question selectedQuestion) {
         this.table.setItems(categories);
     }
 }
