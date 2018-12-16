@@ -8,12 +8,20 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class CategoryTXT implements CategoryDB{
+    private static CategoryTXT uniqueInstance;
     ArrayList<Category> categories;
     File file;
 
-    public CategoryTXT(){
+    private CategoryTXT(){
         this.file = new File("files/categories.txt");
         this.categories = getCategoriesFromTXT();
+    }
+
+    public synchronized static CategoryTXT getInstance(){
+        if (uniqueInstance == null){
+            uniqueInstance = new CategoryTXT();
+        }
+        return uniqueInstance;
     }
 
     //final method that adds the category you created in the categoryCreator
@@ -23,6 +31,18 @@ public class CategoryTXT implements CategoryDB{
             throw new IllegalArgumentException("you cannot add a non-existent category");
         }
         getCategories().add(category);
+        saveCategories();
+        return getCategories();
+    }
+
+    @Override
+    public ArrayList<Category> updateCategory(Category category, String id) {
+        for (Category categoryFromList: getCategories()){
+            if (categoryFromList.equals(category)){
+                int index = getCategories().indexOf(categoryFromList);
+                getCategories().set(index, category);
+            }
+        }
         saveCategories();
         return getCategories();
     }
@@ -87,6 +107,8 @@ public class CategoryTXT implements CategoryDB{
         }
         return subCategories;
     }
+
+
 
     private File getFile(){
         return this.file;

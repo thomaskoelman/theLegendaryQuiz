@@ -12,12 +12,20 @@ import java.io.FileOutputStream;
 import java.util.Properties;
 
 public class PropertyAccess {
+    private static PropertyAccess uniqueInstance;
     File file;
     Properties properties;
 
-    public PropertyAccess(){
+    private PropertyAccess(){
         this.file = new File("files/quiz.properties");
         this.properties = readProperties();
+    }
+
+    public static PropertyAccess getInstance() {
+        if (uniqueInstance == null){
+            uniqueInstance = new PropertyAccess();
+        }
+        return uniqueInstance;
     }
 
     public void writeFeedbackToProperties(Feedback feedback){

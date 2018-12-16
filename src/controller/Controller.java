@@ -14,6 +14,7 @@ import model.domain.categories.MainCategory;
 import model.domain.factories.CategoryFactory;
 import model.domain.factories.QuestionFactory;
 import model.domain.feedback.Feedback;
+import model.domain.questions.JaNee;
 import model.domain.questions.Question;
 import model.domain.states.State;
 import view.*;
@@ -137,6 +138,10 @@ public class Controller implements Subject {
     //controller receives data from view and must overwrite a category in the database
     public void updateCategory(String name, String description, MainCategory mainCategory, String id){
         Category category = CategoryFactory.createCategory(name, description, mainCategory);
+        ArrayList<Category> updatedCategories = getQuiz().updateCategory(category, id);
+        setCategories(FXCollections.observableArrayList(updatedCategories));
+        ArrayList<Question> updatedQuestions = getQuiz().updateQuestions(category, id);
+        setQuestions(FXCollections.observableArrayList(updatedQuestions));
     }
 
     public void updateQuestion(String question, ArrayList<String> answers, Category category, String feedback, int points, String id) {
@@ -149,6 +154,11 @@ public class Controller implements Subject {
         Category category = CategoryFactory.createCategory(name, description, mainCategory);
         ArrayList<Category> updatedCategories = getQuiz().saveCategory(category);
         setCategories(FXCollections.observableArrayList(updatedCategories));
+    }
+
+    public void removeQuestion(Question question){
+        ArrayList<Question> updatedQuestions = getQuiz().removeQuestion(question);
+        setQuestions(FXCollections.observableArrayList(updatedQuestions));
     }
 
     //the controller has to read the categories from the database before the category manager is initialised, so the table shows correctly

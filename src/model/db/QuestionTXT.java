@@ -7,12 +7,20 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class QuestionTXT implements QuestionDB{
+    private static QuestionTXT uniqueInstance;
     ArrayList<Question> questions;
     File file;
 
-    public QuestionTXT(){
+    private QuestionTXT(){
         this.file = new File("files/questions.txt");
         this.questions = getQuestionsFromTXT();
+    }
+
+    public static synchronized QuestionTXT getInstance() {
+        if (uniqueInstance == null){
+            uniqueInstance = new QuestionTXT();
+        }
+        return uniqueInstance;
     }
 
     //fetch questions from the txt file
@@ -39,6 +47,31 @@ public class QuestionTXT implements QuestionDB{
             if (question1.getQuestion().equals(id)){
                 int index = getQuestions().indexOf(question1);
                 getQuestions().set(index, question);
+            }
+        }
+        saveQuestions();
+        return getQuestions();
+    }
+
+    @Override
+    public ArrayList<Question> removeQuestion(Question question){
+        int index = -1;
+        while (getQuestions().contains(question)){
+            index++;
+            Question questionFromList = getQuestions().get(index);
+            if (questionFromList.equals(question)){
+                getQuestions().remove(questionFromList);
+            }
+        }
+        saveQuestions();
+        return getQuestions();
+    }
+
+    @Override
+    public ArrayList<Question> updateQuestions(Category category, String id) {
+        for (Question question: getQuestions()){
+            if (question.getCategory().getName().equals(id)){
+                question.setCategory(category);
             }
         }
         saveQuestions();

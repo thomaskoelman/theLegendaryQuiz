@@ -35,9 +35,9 @@ public class Quiz {
         this.underway = new Underway(this);
         this.finished = new Finished(this);
 
-        this.categoryDB = new CategoryTXT();
-        this.questionDB = new QuestionTXT();
-        this.propertyAccess = new PropertyAccess();
+        this.categoryDB = CategoryTXT.getInstance();
+        this.questionDB = QuestionTXT.getInstance();
+        this.propertyAccess = PropertyAccess.getInstance();
         setFeedback(getPropertyAccess().getFeedback());
         setState();
     }
@@ -46,6 +46,9 @@ public class Quiz {
         return getCategoryDB().addCategory(category);
     }
 
+    public ArrayList<Category> updateCategory(Category category, String id) {
+        return getCategoryDB().updateCategory(category, id);
+    }
     private CategoryDB getCategoryDB(){
         return this.categoryDB;
     }
@@ -86,12 +89,20 @@ public class Quiz {
         return getQuestionDB().getQuestions();
     }
 
+    public ArrayList<Question> updateQuestions(Category category, String id){
+        return getQuestionDB().updateQuestions(category, id);
+    }
+
     public ArrayList<Question> saveQuestion(Question question) {
         return getQuestionDB().addQuestion(question);
     }
 
     public ArrayList<Question> updateQuestion(Question question, String id) {
         return getQuestionDB().updateQuestion(question, id);
+    }
+
+    public ArrayList<Question> removeQuestion(Question question){
+        return getQuestionDB().removeQuestion(question);
     }
 
     public String writeFeedback(ArrayList<Question> questions){
@@ -109,6 +120,8 @@ public class Quiz {
         getPropertyAccess().writeFeedbackToProperties(feedback);
         this.feedback = feedback;
     }
+
+
 
     public void storeMessage(String message){
         getPropertyAccess().writeMessageToProperties(message);
@@ -160,6 +173,7 @@ public class Quiz {
     public void quizEnds(State state) {
         getState().quizEnds(state);
     }
+
 
 
 }

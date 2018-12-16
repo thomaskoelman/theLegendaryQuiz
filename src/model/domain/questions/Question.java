@@ -23,6 +23,11 @@ public abstract class Question implements Serializable {
         setRightAnswer(answers.get(0));
     }
 
+    @Override
+    public String toString() {
+        return getQuestion();
+    }
+
     //setters
 
     private void setQuestion(String question) {

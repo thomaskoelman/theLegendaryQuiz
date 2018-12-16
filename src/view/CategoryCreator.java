@@ -77,13 +77,18 @@ public class CategoryCreator extends GridPane implements Observer {
     }
 
     private void fillInFields(Category category){
-        this.nameField.setText(category.getName());
-        this.descriptionField.setText(category.getDescription());
-        if (category instanceof SubCategory){
-            this.categoryField.getSelectionModel().select(((SubCategory) category).getMainCategory());
-        } else {
-            this.categoryField.getSelectionModel().select(null);
+        try{
+            this.nameField.setText(category.getName());
+            this.descriptionField.setText(category.getDescription());
+            if (category instanceof SubCategory){
+                this.categoryField.getSelectionModel().select(((SubCategory) category).getMainCategory());
+            } else {
+                this.categoryField.getSelectionModel().select(null);
+            }
+        } catch (NullPointerException e){
+            //ignore nullpointer exceptions here, they don't harm the program
         }
+
     }
 
     @Override

@@ -15,4 +15,6 @@ public interface CategoryDB {
     ArrayList<Category> getCategories();
 
     ArrayList<SubCategory> getSubCategories();
+
+    ArrayList<Category> updateCategory(Category category, String id);
 }

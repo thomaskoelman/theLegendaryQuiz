@@ -93,20 +93,24 @@ public class QuestionCreator extends GridPane implements Observer {
     }
 
     private void fillInFields(Question question){
-        this.questionField.setText(question.getQuestion());
-        String questionID = this.questionField.getText();
-        String answers = "";
-        for (String answer: question.getAnswers()){
-            answers += answer + "\n";
+        try{
+            this.questionField.setText(question.getQuestion());
+            String questionID = this.questionField.getText();
+            String answers = "";
+            for (String answer: question.getAnswers()){
+                answers += answer + "\n";
+            }
+            this.statementsArea.setText(answers);
+            this.categoryField.getSelectionModel().select(question.getCategory());
+            this.feedbackField.setText(question.getFeedback());
+            String points = "" + question.getPoints();
+            this.puntenField.setText(points);
+            this.addQuestionButton = new Button("Update");
+            this.addQuestionButton.setOnAction(new UpdateQuestion(getStage(), getController(),this.questionField, this.statementsArea, this.categoryField, this.puntenField, this.feedbackField, questionID));
+            add(this.addQuestionButton,1,12,2,1);
+        } catch (NullPointerException e){
+            //ignore nullpointer exceptions here, they don't harm the program.
         }
-        this.statementsArea.setText(answers);
-        this.categoryField.getSelectionModel().select(question.getCategory());
-        this.feedbackField.setText(question.getFeedback());
-        String points = "" + question.getPoints();
-        this.puntenField.setText(points);
-        this.addQuestionButton = new Button("Update");
-        this.addQuestionButton.setOnAction(new UpdateQuestion(getStage(), getController(),this.questionField, this.statementsArea, this.categoryField, this.puntenField, this.feedbackField, questionID));
-        add(this.addQuestionButton,1,12,2,1);
     }
 
     @Override

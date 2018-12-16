@@ -4,6 +4,7 @@ import controller.Controller;
 import controller.handlers.ChangeFeedbackType;
 import controller.handlers.ChangeQuestion;
 import controller.handlers.OpenNewQuestionCreator;
+import controller.handlers.RemoveQuestion;
 import controller.observerPattern.Observer;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
@@ -60,6 +61,7 @@ public class QuestionManager extends GridPane implements Observer {
         this.addQuestionButton.setOnAction(new OpenNewQuestionCreator(controller));
         this.feedbackComboBox.setOnAction(new ChangeFeedbackType(this.feedbackComboBox, controller));
         this.table.setOnMouseClicked(new ChangeQuestion(this.table, controller));
+        this.removeQuestionButton.setOnAction(new RemoveQuestion(controller, this.table));
 
         //layout
         this.setPadding(new Insets(5, 5, 5, 5));
