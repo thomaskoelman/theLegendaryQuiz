@@ -7,10 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/props.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TheLegendaryQuiz.uml" beforeDir="false" afterPath="$PROJECT_DIR$/TheLegendaryQuiz.uml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/props.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/props/quiz.properties" beforeDir="false" afterPath="$PROJECT_DIR$/props/quiz.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/configurations/PropertyAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/configurations/PropertyAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/props.properties" beforeDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -183,7 +184,7 @@
     <session id="-1854471841">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.opened" value="3" />
@@ -205,26 +206,28 @@
           <entry key="Tips" value="1" />
           <entry key="db" value="1" />
           <entry key="domain" value="1" />
-          <entry key="java" value="19" />
-          <entry key="properties" value="4" />
+          <entry key="java" value="21" />
+          <entry key="properties" value="6" />
+          <entry key="txt" value="1" />
           <entry key="uml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="19" />
-          <entry key="Properties" value="4" />
+          <entry key="JAVA" value="21" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="6" />
           <entry key="UML" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="54" />
+          <entry key="java" value="88" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="54" />
+          <entry key="JAVA" value="88" />
         </counts>
       </usages-collector>
     </session>
@@ -237,22 +240,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/Navigator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="476">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/props.properties">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/model/db/CategoryTXT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="15" column="39" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/db/QuestionTXT.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/configurations/PropertyAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="204">
+              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -366,8 +382,8 @@
         <option value="$PROJECT_DIR$/files/questions.txt" />
         <option value="$PROJECT_DIR$/files/quiz.properties" />
         <option value="$PROJECT_DIR$/src/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/src/model/db/CategoryTXT.java" />
         <option value="$PROJECT_DIR$/src/model/db/QuestionTXT.java" />
+        <option value="$PROJECT_DIR$/src/model/db/CategoryTXT.java" />
         <option value="$PROJECT_DIR$/src/model/configurations/PropertyAccess.java" />
       </list>
     </option>
@@ -431,32 +447,6 @@
               <item name="theLegendaryQuiz" type="b2602c69:ProjectViewProjectNode" />
               <item name="theLegendaryQuiz" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="theLegendaryQuiz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theLegendaryQuiz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="theLegendaryQuiz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theLegendaryQuiz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="handlers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="theLegendaryQuiz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theLegendaryQuiz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="observerPattern" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="theLegendaryQuiz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theLegendaryQuiz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -464,14 +454,7 @@
               <item name="theLegendaryQuiz" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="configurations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="theLegendaryQuiz" type="b2602c69:ProjectViewProjectNode" />
-              <item name="theLegendaryQuiz" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -490,7 +473,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545500062698" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545501120993" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -499,17 +482,18 @@
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="model" />
-      <recent name="view" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\arneb\Desktop\theLegendaryQuiz\props" />
+      <recent name="C:\Users\arneb\Desktop\theLegendaryQuiz\txt_files" />
+      <recent name="C:\Users\arneb\Desktop\theLegendaryQuiz\src\model\db\txt_files" />
+      <recent name="C:\Users\thoma\Documents\UCLL\Toegepaste_informatica\Fase 2\OOO\theLegendaryQuiz\theLegendaryQuiz\files" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\arneb\Desktop\theLegendaryQuiz" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\arneb\Desktop\theLegendaryQuiz\props" />
-      <recent name="C:\Users\arneb\Desktop\theLegendaryQuiz\txt_files" />
-      <recent name="C:\Users\thoma\Documents\UCLL\Toegepaste_informatica\Fase 2\OOO\theLegendaryQuiz\theLegendaryQuiz\files" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="model" />
+      <recent name="view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -642,16 +626,15 @@
       <workItem from="1544981403859" duration="4160000" />
       <workItem from="1545494172367" duration="1224000" />
       <workItem from="1545495654688" duration="2538000" />
-      <workItem from="1545499277103" duration="672000" />
+      <workItem from="1545499277103" duration="2006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151713000" />
+    <option name="totallyTimeSpent" value="153047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2489339" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -795,13 +778,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/view/MessageShower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="62" column="200" selection-start-line="62" selection-start-column="200" selection-end-line="62" selection-end-column="200" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/QuestionShower.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -894,9 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/txt_files/categories.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/txt_files/questions.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -917,20 +890,6 @@
     <entry file="file://$PROJECT_DIR$/files.quiz.properties" />
     <entry file="file://$PROJECT_DIR$/props/quiz.properties">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/db/CategoryTXT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/db/QuestionTXT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-        </state>
-      </provider>
     </entry>
     <entry file="uml://JAVA/">
       <provider selected="true" editor-type-id="UmlEditorProvider">
@@ -1474,13 +1433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/Navigator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/domain/Quiz.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1502,13 +1454,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/props.properties">
+    <entry file="file://$PROJECT_DIR$/props.properties">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/Navigator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/txt_files/categories.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/props/quiz.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/db/QuestionTXT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/db/CategoryTXT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/configurations/PropertyAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="204">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
         </state>
       </provider>
     </entry>
