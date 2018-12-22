@@ -17,9 +17,9 @@ public class PropertyAccess {
     File file;
 
     private PropertyAccess() {
-        propFileName = "props/quiz.properties";
+        propFileName = "props.properties";
         this.properties = readProperties();
-        this.file = new File("props/quiz.properties");
+        this.file = new File("props.properties");
         try {
             inputStream = new FileInputStream(file);
         } catch (FileNotFoundException e) {

@@ -3,54 +3,19 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="55.069444444444436" y="160.0">controller.Controller</node>
-    <node x="118.0" y="0.0">model.domain.states.State</node>
-    <node x="-187.7777777777778" y="316.6666666666667">model.domain.feedback.Feedback</node>
-    <node x="67.52777777777779" y="80.0">model.domain.Quiz</node>
+    <node x="0.0" y="148.0">model.domain.states.State</node>
+    <node x="119.0" y="148.0">model.domain.Quiz</node>
+    <node x="0.0" y="0.0">controller.Controller</node>
+    <node x="0.0" y="74.0">model.domain.feedback.Feedback</node>
   </nodes>
   <notes />
-  <edges>
-    <edge source="controller.Controller" target="model.domain.states.State">
-      <point x="40.000000000000014" y="-15.0" />
-      <point x="145.06944444444446" y="135.0" />
-      <point x="161.95833333333334" y="135.0" />
-      <point x="161.95833333333334" y="60.0" />
-      <point x="180.5" y="60.0" />
-      <point x="25.0" y="15.0" />
-    </edge>
-    <edge source="controller.Controller" target="model.domain.Quiz">
-      <point x="1.4210854715202004E-14" y="-15.0" />
-      <point x="105.06944444444446" y="135.0" />
-      <point x="103.52777777777779" y="135.0" />
-      <point x="0.0" y="15.0" />
-    </edge>
-    <edge source="controller.Controller" target="model.domain.feedback.Feedback">
-      <point x="-39.999999999999986" y="-15.0" />
-      <point x="65.06944444444446" y="135.0" />
-      <point x="47.652777777777786" y="135.0" />
-      <point x="47.652777777777786" y="60.0" />
-      <point x="16.33333333333333" y="60.0" />
-      <point x="-32.66666666666667" y="15.0" />
-    </edge>
-    <edge source="model.domain.Quiz" target="model.domain.feedback.Feedback">
-      <point x="-27.0" y="-15.0" />
-      <point x="76.52777777777779" y="50.0" />
-      <point x="48.99999999999999" y="50.0" />
-      <point x="-7.105427357601002E-15" y="15.0" />
-    </edge>
-    <edge source="model.domain.Quiz" target="model.domain.states.State">
-      <point x="27.0" y="-15.0" />
-      <point x="130.52777777777777" y="60.0" />
-      <point x="155.5" y="60.0" />
-      <point x="0.0" y="15.0" />
-    </edge>
-  </edges>
-  <settings layout="Hierarchic Group" zoom="0.8999999999999999" x="236.875" y="163.33333333333334" />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="2.0" y="173.0" />
   <SelectedNodes>
-    <node>model.domain.feedback.Feedback</node>
+    <node>controller.Controller</node>
   </SelectedNodes>
   <Categories />
   <SCOPE>All</SCOPE>
-  <VISIBILITY>public</VISIBILITY>
+  <VISIBILITY>private</VISIBILITY>
 </Diagram>
 
