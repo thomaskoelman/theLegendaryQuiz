@@ -13,7 +13,7 @@ public class CategoryTXT implements CategoryDB{
     File file;
 
     private CategoryTXT(){
-        this.file = new File("files/categories.txt");
+        this.file = new File("txt_files/categories.txt");
         this.categories = getCategoriesFromTXT();
     }
 

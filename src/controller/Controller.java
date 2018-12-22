@@ -20,9 +20,13 @@ import model.domain.states.State;
 import view.*;
 
 import javax.swing.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.Properties;
 
 public class Controller implements Subject {
     private Quiz quiz;
@@ -213,7 +217,7 @@ public class Controller implements Subject {
     }
 
     private void setQuiz() {
-        this.quiz = new Quiz();
+            this.quiz = new Quiz();
     }
 
     public ArrayList<Observer> getObservers() {

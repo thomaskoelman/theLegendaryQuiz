@@ -12,7 +12,7 @@ public class QuestionTXT implements QuestionDB{
     File file;
 
     private QuestionTXT(){
-        this.file = new File("files/questions.txt");
+        this.file = new File("txt_files/questions.txt");
         this.questions = getQuestionsFromTXT();
     }
 
