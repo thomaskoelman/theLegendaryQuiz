@@ -3,17 +3,24 @@ package model.db;
 import model.domain.categories.Category;
 import model.domain.categories.MainCategory;
 import model.domain.categories.SubCategory;
+import readAndWriteJAR.FindPath;
 
 import java.io.*;
+import java.nio.file.Path;
 import java.util.ArrayList;
 
 public class CategoryTXT implements CategoryDB{
     private static CategoryTXT uniqueInstance;
     ArrayList<Category> categories;
     File file;
+    private FindPath fp;
+    private Path categoriesPath;
 
     private CategoryTXT(){
-        this.file = new File("txt_files/categories.txt");
+        fp = new FindPath();
+        categoriesPath = fp.addToPath("txt_files", "categories.txt");
+        //System.out.format("\npropsPath toString: %s%n", categoriesPath.toString() + "\n");
+        //this.file = new File("txt_files/categories.txt");
         this.categories = getCategoriesFromTXT();
     }
 
@@ -63,12 +70,15 @@ public class CategoryTXT implements CategoryDB{
 
     //fetch categories from the txt file
     private ArrayList<Category> getCategoriesFromTXT(){
-        File file = getFile();
         try {
-            if (file.length() == 0){
+        FileInputStream fis = new FileInputStream(categoriesPath.toString());
+        if (fis.available() == 0){
+        //File file = getFile();
+       // try {
+            //if (file.length() == 0){
                 return new ArrayList<>();
             }
-            FileInputStream fis = new FileInputStream(file);
+            //FileInputStream fis = new FileInputStream(categoriesPath.toString());
             ObjectInputStream ois = new ObjectInputStream(fis);
             ArrayList<Category> categories = (ArrayList<Category>) ois.readObject();
             ois.close();
@@ -81,7 +91,7 @@ public class CategoryTXT implements CategoryDB{
     //overwrite the txt file with the current state of the arraylist
     private void saveCategories(){
         try {
-            FileOutputStream fos = new FileOutputStream(getFile());
+            FileOutputStream fos = new FileOutputStream(categoriesPath.toString());
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(getCategories());
             oos.close();

@@ -1,27 +1,36 @@
 package model.configurations;
 
-import model.domain.Quiz;
+import jdk.nashorn.internal.runtime.FindProperty;
 import model.domain.feedback.Feedback;
 import model.domain.feedback.FeedbackTypes;
 import model.domain.feedback.NormalScoreCalculator;
 import model.domain.states.State;
+import readAndWriteJAR.FindPath;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import java.io.*;
 import java.util.Properties;
 
 public class PropertyAccess {
     private static PropertyAccess uniqueInstance;
+    private FindPath fp;
+    private Path propsPath;
     String propFileName;
     Properties properties;
     InputStream inputStream;
     File file;
 
     private PropertyAccess() {
+        fp = new FindPath();
+        propsPath = fp.addToPath("props", "quiz.properties");
+        //System.out.format("\npropsPath toString: %s%n", propsPath.toString() + "\n");
         propFileName = "props/quiz.properties";
         this.properties = readProperties();
-        this.file = new File("props/quiz.properties");
+        //this.file = new File("props/quiz.properties");
         try {
-            inputStream = new FileInputStream(file);
+            inputStream = new FileInputStream(String.valueOf(propsPath));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -42,7 +51,7 @@ public class PropertyAccess {
         }
         try {
             //FileOutputStream outputStream = new FileOutputStream(propFileName);
-            properties.store(new FileOutputStream(propFileName), null);
+            properties.store(new FileOutputStream(String.valueOf(propsPath)), null);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -55,7 +64,7 @@ public class PropertyAccess {
                 properties.setProperty("state", state.toString());
                 try {
                     //FileOutputStream outputStream = new FileOutputStream(propFileName);
-                    properties.store(new FileOutputStream(propFileName), null);
+                    properties.store(new FileOutputStream(String.valueOf(propsPath)), null);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -71,7 +80,7 @@ public class PropertyAccess {
             properties.setProperty("lastResults", message);
             try {
                 //FileOutputStream outputStream = new FileOutputStream(propFileName);
-                properties.store(new FileOutputStream(propFileName), null);
+                properties.store(new FileOutputStream(String.valueOf(propsPath)), null);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -80,7 +89,7 @@ public class PropertyAccess {
 
     private Properties readProperties() {
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream(propFileName);
+            FileOutputStream fileOutputStream = new FileOutputStream(String.valueOf(propsPath));
             if (properties == null){
                 properties = new Properties();
             }
